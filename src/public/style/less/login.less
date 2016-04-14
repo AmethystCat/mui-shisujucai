@@ -1,0 +1,71 @@
+@import "common/variable";
+@import "common/iconfont";
+
+@u: 1rem;
+@f: 16;
+body {
+    font-family: "arial, helvetica, sans-serif";
+    background: @primary;
+}
+.ss-bar-nav {
+    box-shadow: none;
+    border-bottom: 1px solid #FEC75C;
+    background: url(../../images/bg_bar.png) repeat-x center;
+    .ss-icon-left-nav {
+        font-size: (22/@f)*@u;
+        color: #fff;
+    }
+    .ss-title {
+        color: #fff;
+        font-size: (22/@f)*@u;
+    }
+}
+
+.ss-content {
+    background: none;
+}
+
+.ss-login-form {
+    @pc: #FFDA99;
+    .input-w {
+        padding: (25/@f)*@u;
+        padding-bottom: 0;
+        input {
+            padding-left: 0;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid @pc;
+            background: transparent;
+            &::-webkit-input-placeholder {
+                font-weight: 600;
+                font-size: (18/@f)*@u;
+                color: lighten(@pc, 5%);
+            }          
+        }
+        &:first-child+.input-w{
+            padding-top: 0;
+        }
+        &-last {
+            padding-top: 1rem;
+        }
+        
+        .ss-btn {
+            width: 100%;
+            height: (45/@f)*@u;
+            border: 1px solid #FFE5BD;
+            background: #FEBF5A;
+            color: #fff;
+            font-weight: 600;
+            font-size: (18/@f)*@u;
+            &-login {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .ss-btn__forgot-pass {
+        padding: (25/@f)*@u;
+        font-size: 0.9rem;
+        color: lighten(@pc, 10%);
+    }
+}

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e602";
+}
+body {
+  font-family: "arial, helvetica, sans-serif";
+  background: #FAA519;
+}
+.ss-bar-nav {
+  box-shadow: none;
+  border-bottom: 1px solid #FEC75C;
+  background: url(../../images/bg_bar.png) repeat-x center;
+}
+.ss-bar-nav .ss-icon-left-nav {
+  font-size: 1.375rem;
+  color: #fff;
+}
+.ss-bar-nav .ss-title {
+  color: #fff;
+  font-size: 1.375rem;
+}
+.ss-content {
+  background: none;
+}
+.ss-login-form .input-w {
+  padding: 1.5625rem;
+  padding-bottom: 0;
+}
+.ss-login-form .input-w input {
+  padding-left: 0;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #FFDA99;
+  background: transparent;
+}
+.ss-login-form .input-w input::-webkit-input-placeholder {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #ffe3b3;
+}
+.ss-login-form .input-w:first-child + .input-w {
+  padding-top: 0;
+}
+.ss-login-form .input-w-last {
+  padding-top: 1rem;
+}
+.ss-login-form .input-w .ss-btn {
+  width: 100%;
+  height: 2.8125rem;
+  border: 1px solid #FFE5BD;
+  background: #FEBF5A;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.ss-login-form .input-w .ss-btn-login {
+  margin-bottom: 1rem;
+}
+.ss-login-form .ss-btn__forgot-pass {
+  padding: 1.5625rem;
+  font-size: 0.9rem;
+  color: #ffedcc;
+}
