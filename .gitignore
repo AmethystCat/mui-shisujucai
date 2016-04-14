@@ -1,0 +1,12 @@
+# IDE
+.idea
+*.project
+*.sublime-project
+*.sublime-workspace
+
+# node_modules
+node_modules
+npm-debug.log
+
+# source-map
+*.map
