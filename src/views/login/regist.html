@@ -11,26 +11,32 @@
 	<body>
 		
 		<header class="mui-bar mui-bar-nav ss-bar-nav">
-		    <a class="mui-action-back mui-icon iconfont icon-close mui-pull-left ss-icon-left-nav"></a>
-		    <h1 class="mui-title ss-title">登录</h1>
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+		    <h1 class="mui-title ss-title">注册</h1>
 		</header>
 		<div class="mui-content ss-content">
 		    <form action="" class="ss-login-form">
 		    	<div class="input-w">
-		    		<input type="text" name="phone" id="phone" placeholder="请输入登录手机号码" />
+		    		<input type="tel" name="phone" id="phone" placeholder="请输入注册手机号码" />
 		    	</div>
 		    	<div class="input-w">
 		    		<input type="password" name="password" id="password" placeholder="请输入密码" />
 		    	</div>
 		    	
-		    	<a href="#" class="ss-btn__forgot-pass">忘记密码？</a>
+		    	<div class="input-w">
+		    		<input type="password" name="passConfirm" id="passConfirm" placeholder="请再次输入密码" />
+		    	</div>
+		    	
+		    	<div class="input-w">
+		    		<input type="tel" name="invitePhone" id="invitePhone" placeholder="邀请人手机号（无邀请人不填写）" />
+		    	</div>
+		    	
 		    	<div class="input-w input-w-last">
-		    		<button type="button" class="mui-btn ss-btn ss-btn-login">登录</button>
 		    		<button type="button" class="mui-btn ss-btn ss-btn-resgist">注册</button>
 		    	</div>
 		    </form>
 		</div>
 	</body>
 	<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../public/js/login/login.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/login/regist.js" type="text/javascript" charset="utf-8"></script>
 </html>
