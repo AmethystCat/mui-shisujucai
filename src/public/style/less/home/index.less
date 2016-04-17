@@ -14,12 +14,12 @@
     }
     .ss-icon-city {
         height: 44px;
-        line-height: 1.5;
         font-size: 1.2rem;
         color: lighten(@pc, 10%);
         &:after {
             content: '\e471';
             display: inline-block;
+            font-size: 1.5rem;
             transform: rotate(270deg);
         }
     }
@@ -45,7 +45,7 @@
         box-shadow: none;
         .mui-tab-item {
             .mui-icon ~ .mui-tab-label {
-                color: lighten(@pc, 10%);
+                color: lighten(@pc, 15%);
             }
             &.mui-active {
                 border-bottom: 5px solid #fff;
@@ -89,10 +89,4 @@
     }
 }
 
-
-.mui-bar-tab {
-    .mui-tab-item.mui-active {
-        color: @primary;
-    }
-}
 

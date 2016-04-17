@@ -7,6 +7,39 @@ ul {
   padding: 0;
   list-style: none;
 }
+.ss-bar-tab.mui-bar-tab .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-hongbao {
+  background: url("../../../images/hongbao_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-wifi {
+  background: url("../../../images/second_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-earn {
+  background: url("../../../images/earn_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-me {
+  background: url("../../../images/nav_me_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab .ss-icon-hongbao {
+  background: url("../../../images/hongbao_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-wifi {
+  background: url("../../../images/second_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-earn {
+  background: url("../../../images/earn_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-me {
+  background: url("../../../images/nav_me_d.png") no-repeat center;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');

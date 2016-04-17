@@ -7,6 +7,39 @@ ul {
   padding: 0;
   list-style: none;
 }
+.ss-bar-tab.mui-bar-tab .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-hongbao {
+  background: url("../../../images/hongbao_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-wifi {
+  background: url("../../../images/second_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-earn {
+  background: url("../../../images/earn_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-me {
+  background: url("../../../images/nav_me_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab .ss-icon-hongbao {
+  background: url("../../../images/hongbao_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-wifi {
+  background: url("../../../images/second_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-earn {
+  background: url("../../../images/earn_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-me {
+  background: url("../../../images/nav_me_d.png") no-repeat center;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
@@ -33,13 +66,13 @@ ul {
 }
 .ss-bar-nav .ss-icon-city {
   height: 44px;
-  line-height: 1.5;
   font-size: 1.2rem;
   color: #ffedcc;
 }
 .ss-bar-nav .ss-icon-city:after {
   content: '\e471';
   display: inline-block;
+  font-size: 1.5rem;
   transform: rotate(270deg);
 }
 .ss-bar-nav .ss-btn-share {
@@ -62,7 +95,7 @@ ul {
   box-shadow: none;
 }
 .ss-content .sub-bar-nav .mui-tab-item .mui-icon ~ .mui-tab-label {
-  color: #ffedcc;
+  color: #fff6e6;
 }
 .ss-content .sub-bar-nav .mui-tab-item.mui-active {
   border-bottom: 5px solid #fff;
@@ -99,7 +132,4 @@ ul {
 }
 .ss-content .mui-icon-trip {
   background: url("../../../images/hb_navlist_trip.png") no-repeat center;
-}
-.mui-bar-tab .mui-tab-item.mui-active {
-  color: #FAA519;
 }

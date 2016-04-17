@@ -7,6 +7,39 @@ ul {
   padding: 0;
   list-style: none;
 }
+.ss-bar-tab.mui-bar-tab .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-hongbao {
+  background: url("../../../images/hongbao_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-wifi {
+  background: url("../../../images/second_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-earn {
+  background: url("../../../images/earn_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-me {
+  background: url("../../../images/nav_me_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab .ss-icon-hongbao {
+  background: url("../../../images/hongbao_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-wifi {
+  background: url("../../../images/second_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-earn {
+  background: url("../../../images/earn_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-me {
+  background: url("../../../images/nav_me_d.png") no-repeat center;
+}
 .ss-content--list-hongbao {
   overflow-x: hidden;
 }
@@ -31,13 +64,14 @@ ul {
   position: absolute;
   bottom: 0.375rem;
   width: 50%;
+  font-size: 1rem;
 }
 .ss-content--list-hongbao a .text1 {
   left: 0;
   padding-left: 0.625rem;
 }
 .ss-content--list-hongbao a .text1 .hongbao-name {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .ss-content--list-hongbao a .text2 {
   right: 0;
