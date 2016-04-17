@@ -1,0 +1,46 @@
+@charset "utf-8";
+body {
+  font-family: "arial, helvetica, sans-serif";
+  background: #FAA519;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.ss-content--list-hongbao {
+  overflow-x: hidden;
+}
+.ss-content--list-hongbao a {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.ss-content--list-hongbao a img {
+  display: block;
+  width: 100%;
+}
+.ss-content--list-hongbao a .hongbao-info {
+  color: #efefef;
+}
+.ss-content--list-hongbao a .hongbao-info span {
+  display: block;
+}
+.ss-content--list-hongbao a .text1,
+.ss-content--list-hongbao a .text2 {
+  position: absolute;
+  bottom: 0.375rem;
+  width: 50%;
+}
+.ss-content--list-hongbao a .text1 {
+  left: 0;
+  padding-left: 0.625rem;
+}
+.ss-content--list-hongbao a .text1 .hongbao-name {
+  font-size: 1.3rem;
+}
+.ss-content--list-hongbao a .text2 {
+  right: 0;
+  text-align: right;
+  padding-right: 0.625rem;
+}

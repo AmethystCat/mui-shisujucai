@@ -1,0 +1,98 @@
+@import "../common/variable";
+@import "../common/component";
+@import "../common/iconfont";
+
+.ss-bar-nav {
+    @pc: #FFDA99;
+    box-shadow: none;
+    border-bottom: 1px solid #FEBC58;
+    background: #FAA519 url('../../../images/bg_bar.png') repeat-x center;
+
+    .ss-title {
+        color: lighten(@pc, 10%);
+        font-size: (22/@f)*@u;
+    }
+    .ss-icon-city {
+        height: 44px;
+        line-height: 1.5;
+        font-size: 1.2rem;
+        color: lighten(@pc, 10%);
+        &:after {
+            content: '\e471';
+            display: inline-block;
+            transform: rotate(270deg);
+        }
+    }
+    .ss-btn-share {
+        float: right;
+        height: 44px;
+        line-height: 1.5;
+        font-size: 1.2rem;
+        color: lighten(@pc, 10%);
+    }
+}
+
+.ss-content {
+    @pc: #FFDA99;
+    background: transparent;
+    .sub-bar-nav {
+        display: table;
+        top: 44px;
+        bottom: auto;
+        width: 100%;
+        height: 85px;
+        background: transparent;
+        box-shadow: none;
+        .mui-tab-item {
+            .mui-icon ~ .mui-tab-label {
+                color: lighten(@pc, 10%);
+            }
+            &.mui-active {
+                border-bottom: 5px solid #fff;
+                color: #fff;
+
+                .mui-icon {
+                    width: 45px;
+                    height: 45px;
+                }
+                .mui-tab-label {
+                    padding-top: 2/@f*@u;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .mui-icon {
+            width: 37px;
+            height: 37px;
+            background-size: contain;
+            transition: all 80ms;
+        }
+    }
+
+    .ss-icon-navAll {
+        background: url("../../../images/hb_navlist_all.png") no-repeat center;
+    }
+    .ss-icon-food {
+        background: url("../../../images/hb_navlist_food.png") no-repeat center;
+    }
+    .ss-icon-clothes {
+        background: url("../../../images/hb_navlist_clothes.png") no-repeat center;
+    }
+    .mui-icon-hotel {
+        background: url("../../../images/hb_navlist_hotel.png") no-repeat center;
+    }
+    .ss-icon-navAvilable {
+        background: url("../../../images/hb_navlist_avilable.png") no-repeat center;
+    }
+    .mui-icon-trip {
+        background: url("../../../images/hb_navlist_trip.png") no-repeat center;
+    }
+}
+
+
+.mui-bar-tab {
+    .mui-tab-item.mui-active {
+        color: @primary;
+    }
+}
+

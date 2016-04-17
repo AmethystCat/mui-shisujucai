@@ -1,0 +1,105 @@
+@charset "utf-8";
+body {
+  font-family: "arial, helvetica, sans-serif";
+  background: #FAA519;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e602";
+}
+.ss-bar-nav {
+  box-shadow: none;
+  border-bottom: 1px solid #FEBC58;
+  background: #FAA519 url('../../../images/bg_bar.png') repeat-x center;
+}
+.ss-bar-nav .ss-title {
+  color: #ffedcc;
+  font-size: 1.375rem;
+}
+.ss-bar-nav .ss-icon-city {
+  height: 44px;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #ffedcc;
+}
+.ss-bar-nav .ss-icon-city:after {
+  content: '\e471';
+  display: inline-block;
+  transform: rotate(270deg);
+}
+.ss-bar-nav .ss-btn-share {
+  float: right;
+  height: 44px;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #ffedcc;
+}
+.ss-content {
+  background: transparent;
+}
+.ss-content .sub-bar-nav {
+  display: table;
+  top: 44px;
+  bottom: auto;
+  width: 100%;
+  height: 85px;
+  background: transparent;
+  box-shadow: none;
+}
+.ss-content .sub-bar-nav .mui-tab-item .mui-icon ~ .mui-tab-label {
+  color: #ffedcc;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active {
+  border-bottom: 5px solid #fff;
+  color: #fff;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active .mui-icon {
+  width: 45px;
+  height: 45px;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active .mui-tab-label {
+  padding-top: 0.125rem;
+  font-size: 1rem;
+}
+.ss-content .sub-bar-nav .mui-icon {
+  width: 37px;
+  height: 37px;
+  background-size: contain;
+  transition: all 80ms;
+}
+.ss-content .ss-icon-navAll {
+  background: url("../../../images/hb_navlist_all.png") no-repeat center;
+}
+.ss-content .ss-icon-food {
+  background: url("../../../images/hb_navlist_food.png") no-repeat center;
+}
+.ss-content .ss-icon-clothes {
+  background: url("../../../images/hb_navlist_clothes.png") no-repeat center;
+}
+.ss-content .mui-icon-hotel {
+  background: url("../../../images/hb_navlist_hotel.png") no-repeat center;
+}
+.ss-content .ss-icon-navAvilable {
+  background: url("../../../images/hb_navlist_avilable.png") no-repeat center;
+}
+.ss-content .mui-icon-trip {
+  background: url("../../../images/hb_navlist_trip.png") no-repeat center;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}

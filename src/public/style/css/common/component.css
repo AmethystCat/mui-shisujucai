@@ -1,2 +1,9 @@
-@charset 'utf-8';
-@impport 'variable';
+@charset "utf-8";
+body {
+  font-family: "arial, helvetica, sans-serif";
+  background: #FAA519;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}

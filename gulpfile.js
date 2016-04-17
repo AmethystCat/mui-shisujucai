@@ -9,7 +9,8 @@ var PUBLIC = './src/public/',
 	STYLE = PUBLIC + 'style/',
 	LESS = [STYLE + 'less/**/*.less'],
 	CSS = [STYLE + 'css/*.css'],
-	PAGES = ['./src/views/**/*.html'];
+	PAGES = ['./src/views/**/*.html'],
+	JS = ['./src/**/*.js'];
 
 gulp.task('less', function () {
 	return gulp.src(LESS)
@@ -20,15 +21,22 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', function () {
+	
 	gulp.watch(PAGES).on('change', function (e) {
 		console.log(e.path + ' changed...');
 		bs.reload()
 	});
+	
 	gulp.watch(LESS, ['less']);
 	
 	gulp.watch(CSS).on('change', function (e) {
 		console.log(e.path + ' changed...')
-		bs.reload(e.path);
+		bs.reload(CSS);
+	});
+	
+	gulp.watch(JS).on('change', function (e) {
+		console.log(e.path + ' changed...')
+		bs.reload();
 	});
 });
 

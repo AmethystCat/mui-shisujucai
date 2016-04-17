@@ -1,13 +1,12 @@
 @import "common/variable";
+@import "common/component";
 @import "common/iconfont";
 
 @u: 1rem;
 @f: 16;
-body {
-    font-family: "arial, helvetica, sans-serif";
-    background: @primary;
-}
+
 .ss-bar-nav {
+    @pc: #FFDA99;
     box-shadow: none;
     border-bottom: 1px solid #FEC75C;
     background: url(../../images/bg_bar.png) repeat-x center;
@@ -16,35 +15,53 @@ body {
         color: #fff;
     }
     .ss-title {
-        color: #fff;
+        color: lighten(@pc, 10%);
         font-size: (22/@f)*@u;
     }
 }
 
 .ss-content {
+    @pc: #FFDA99;
     background: none;
+    p {
+        margin: 0;
+        text-align: center;
+        color: lighten(@pc, 10%);
+    }
+    .tip {
+        position: absolute;
+        width: 100%;
+        bottom: 0;    
+        z-index: 0;
+    }
 }
 
 .ss-login-form {
     @pc: #FFDA99;
+    position: relative;
+    z-index: 1;
+    background: @primary;
     .input-w {
-        padding: (25/@f)*@u;
+        padding: (15/@f)*@u (25/@f)*@u 0 (25/@f)*@u;
         padding-bottom: 0;
         input {
+            .remH(32);
             padding-left: 0;
+            margin-bottom: 0;
             color: #fff;
             border: none;
             border-radius: 0;
             border-bottom: 2px solid @pc;
             background: transparent;
             &::-webkit-input-placeholder {
-                font-weight: 800;
+                font-weight: 40;
                 font-size: (16/@f)*@u;
+                letter-spacing: 1px;
                 color: lighten(@pc, 5%);
             }          
         }
-        &:first-child+.input-w{
-            padding-top: 0;
+        &:first-child{
+            padding-top: (25/@f)*@u;
         }
         &-last {
             padding-top: 1rem;
@@ -52,20 +69,41 @@ body {
         
         .ss-btn {
             width: 100%;
-            height: (45/@f)*@u;
+            height: (43/@f)*@u;
             border: 1px solid #FFE5BD;
             background: #FEBF5A;
-            color: #fff;
-            font-weight: 600;
+            letter-spacing: 1px;;
+            color: lighten(@pc, 10%);
+            font-weight: 300;
             font-size: (18/@f)*@u;
             &-login {
                 margin-bottom: 1rem;
             }
+            &-sendCode {
+                position: absolute;
+                right: 25/@f*@u;
+                top: 7/@f*@u;
+                .remW(138);
+            }
+        }
+        
+        &--validation {
+            position: relative;
+            .validationNum-input {
+                display: inline-block;
+                .remW(170);
+            }
         }
     }
     .ss-btn__forgot-pass {
-        padding: (25/@f)*@u;
+        display: inline-block;
+        padding-top: (13/@f)*@u;;
+        padding-left: (25/@f)*@u;
         font-size: 0.9rem;
-        color: lighten(@pc, 10%);
+        color: lighten(@pc, 5%);
+    }
+    
+    .error-mes-w {
+        padding-top: 25/@f*@u;
     }
 }
