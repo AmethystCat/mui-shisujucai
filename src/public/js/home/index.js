@@ -9,3 +9,11 @@ mui.init({
         }
     }]
 });
+
+mui('.ss-bar-tab').on('tap', '.mui-tab-item', function(e){
+	e.preventDefault();
+	var href = this.href;
+	mui.openWindow({
+		url: href
+	});
+});
