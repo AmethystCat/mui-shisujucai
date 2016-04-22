@@ -141,7 +141,7 @@ List.render(mock.listData, function(){
 	mui('.ss-content--list-hongbao').on('click', '.list-item-hongbao', function(e) {
 		e.preventDefault();
 		mui.openWindow({
-			url: '/views/home/detail-hongbao.html'
+			url: '/src/views/home/detail-hongbao.html'
 		});
 	});
 });

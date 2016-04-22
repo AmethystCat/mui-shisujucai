@@ -4,6 +4,6 @@ mui.init({
 
 mui('.ss-login-form').on('click', '.ss-btn-submit', function () {
 	mui.openWindow({
-		url: '/views/login/modify-password.html'
+		url: '/src/views/login/modify-password.html'
 	});
 });

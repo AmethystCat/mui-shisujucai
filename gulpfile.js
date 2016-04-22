@@ -42,7 +42,7 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['less'], function () {
 	bs.init({
-		server: './src'
+		server: './'
 	});
 	gulp.run('watch');
 });

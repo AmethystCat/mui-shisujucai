@@ -74,6 +74,7 @@ ul {
   display: inline-block;
   font-size: 1.5rem;
   transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
 }
 .ss-bar-nav .ss-btn-share {
   float: right;
