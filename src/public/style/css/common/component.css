@@ -40,3 +40,6 @@ ul {
 .ss-bar-tab .ss-icon-me {
   background: url("../../../images/nav_me_d.png") no-repeat center;
 }
+.tc {
+  text-align: center;
+}

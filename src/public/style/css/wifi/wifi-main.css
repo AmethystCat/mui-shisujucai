@@ -1,0 +1,127 @@
+@charset "utf-8";
+body {
+  font-family: "arial, helvetica, sans-serif";
+  background: #FAA519;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.ss-bar-tab.mui-bar-tab .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-hongbao {
+  background: url("../../../images/hongbao_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-wifi {
+  background: url("../../../images/second_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-earn {
+  background: url("../../../images/earn_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-me {
+  background: url("../../../images/nav_me_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab .ss-icon-hongbao {
+  background: url("../../../images/hongbao_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-wifi {
+  background: url("../../../images/second_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-earn {
+  background: url("../../../images/earn_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-me {
+  background: url("../../../images/nav_me_d.png") no-repeat center;
+}
+.tc {
+  text-align: center;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e602";
+}
+h3,
+h4 {
+  color: #5d5757;
+}
+.btn-buy {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  height: 42px;
+  border-radius: 0;
+  border: none;
+  border-top: #ccc;
+  border-bottom: #ae7311;
+  background-color: #FAA519;
+  color: #fff;
+  z-index: 1001;
+}
+.ss-content {
+  position: relative;
+  background: #fff;
+}
+.ss-content img {
+  display: block;
+  width: 100%;
+}
+.price-w {
+  padding-top: 10px;
+}
+.price-w .tt {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.price-w .share-w {
+  float: right;
+  padding: 0 15px;
+  border-left: 1px solid #ccc;
+}
+.price-w .share-w .btn-share {
+  display: block;
+  padding-top: 40px;
+  background: url(../../../images/icon-share.png) no-repeat center top;
+  color: #ccc;
+}
+.price-w .price-info-w {
+  padding-left: 10px;
+}
+.price-w .price-info-w .wifi-name {
+  font-size: 1rem;
+}
+.price-w .price-info-w .price-current {
+  color: red;
+}
+.price-w .price-info-w .price-origin {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.price-w .price-info-w .xl {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+.price-w .wifi-info-w .img-hr {
+  margin-bottom: 25px;
+}
+.price-w .wifi-info-w .info-c {
+  padding: 10px 10px 0 10px;
+}

@@ -240,10 +240,12 @@
 					"src/public/js/login/regist.js",
 					"src/public/style/css/common/mui.min.css",
 					"src/public/style/css/login.css",
-					"src/public/images/bg_bar.png"
+					"src/public/images/bg_bar.png",
+					"src/public/js/common/base.js"
 				],
 				"refer": [
-					"src/views/home/index.html"
+					"src/views/home/index.html",
+					"src/views/wifi/main.html"
 				],
 				"priority": 0
 			},
@@ -267,7 +269,22 @@
 				"resources": [
 					"src/public/js/libs/mui.min.js",
 					"src/public/style/css/fonts/mui.ttf",
-					"src/public/style/css/common/mui.min.css"
+					"src/public/style/css/common/mui.min.css",
+					"src/public/images/wifi-ad2.png",
+					"src/public/images/wifi-info.png",
+					"src/public/style/css/wifi/wifi-main.css",
+					"src/public/images/icon-share.png",
+					"src/public/images/wifi-ad1.png",
+					"src/public/images/wifi-banner.png",
+					"src/public/js/wifi/wifi-main.js",
+					"src/public/images/earn_d.png",
+					"src/public/images/nav_me_d.png",
+					"src/public/images/second_s.png",
+					"src/public/images/hongbao_d.png",
+					"src/public/images/hongbao_s.png",
+					"src/public/images/second_d.png",
+					"src/public/images/earn_s.png",
+					"src/public/images/nav_me_s.png"
 				],
 				"refer": [],
 				"priority": 0

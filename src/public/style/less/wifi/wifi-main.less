@@ -1,0 +1,80 @@
+@import "../common/variable";
+@import "../common/component";
+@import "../common/iconfont";
+
+h3,
+h4 {
+    color: #5d5757;
+}
+
+.btn-buy {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    height: 42px;
+    border-radius: 0;
+    border: none;
+    border-top: #ccc;
+    border-bottom: #ae7311;
+    background-color: @primary;
+    color: #fff;
+    z-index: 1001;
+}
+    
+.ss-content {
+    position: relative;
+    background: #fff;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.price-w {
+    @pad: 10px;
+    padding-top: @pad;
+    
+    .tt {
+        padding-bottom: @pad;
+        margin-bottom: @pad;
+        border-bottom: 1px solid #ccc;
+    }
+    .share-w {
+        float: right;
+        padding: 0 @pad*1.5;
+        border-left: 1px solid #ccc;
+        .btn-share {
+            display: block;
+            padding-top: 40px;
+            background: url(../../../images/icon-share.png) no-repeat center top;    
+            color: #ccc;
+        }
+    }
+    .price-info-w {
+        padding-left: @pad;
+        
+        .wifi-name {
+            font-size: 1rem;
+        }
+        .price {
+            &-current {
+                color: red;
+            }
+            &-origin {
+                text-decoration: line-through;
+                color: #ccc;
+            }
+        }
+        .xl {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+    }
+    .wifi-info-w {
+        .img-hr {
+            margin-bottom: @pad*2.5;
+        }
+        .info-c {
+            padding: @pad @pad 0 @pad;
+        }
+    }
+}

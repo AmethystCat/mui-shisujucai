@@ -40,6 +40,9 @@ ul {
 .ss-bar-tab .ss-icon-me {
   background: url("../../../images/nav_me_d.png") no-repeat center;
 }
+.tc {
+  text-align: center;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
