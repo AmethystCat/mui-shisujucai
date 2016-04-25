@@ -135,6 +135,11 @@ ul {
   top: 0.4375rem;
   width: 8.625rem;
 }
+.ss-login-form .input-w .ss-btn-sendCode.sending {
+  font-size: 1rem;
+  color: #494949;
+  border: 1px solid #494949;
+}
 .ss-login-form .input-w--validation {
   position: relative;
 }

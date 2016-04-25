@@ -99,7 +99,11 @@
     H.isArray = function (obj) {
         return proUtils.type(obj) === 'array';
     };
-
+	
+	H.isNumber = function (obj) {
+        return proUtils.type(obj) === 'number';
+    };
+	
     H.isString = function (obj){
         return proUtils.type(obj) === 'string' ;
     };
