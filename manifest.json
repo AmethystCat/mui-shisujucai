@@ -170,7 +170,8 @@
 					"src/public/style/css/login.css",
 					"src/public/style/css/fonts/iconfont.ttf",
 					"src/public/images/bg_bar.png",
-					"src/public/js/libs/mui.min.js"
+					"src/public/js/libs/mui.min.js",
+					"src/public/js/common/base.js"
 				],
 				"priority": 0,
 				"refer": [
@@ -207,7 +208,9 @@
 					"src/public/images/bg_bar.png",
 					"src/public/style/css/common/mui.min.css",
 					"src/public/images/nav_me_s.png",
-					"src/public/images/earn_s.png"
+					"src/public/images/earn_s.png",
+					"src/public/js/common/base.js",
+					"src/public/js/common/common.js"
 				],
 				"refer": [
 					"/src/views/me/main.html",
@@ -258,7 +261,8 @@
 			},
 			"src/views/login/get-password.html": {
 				"resources": [
-					"src/public/js/login/get-password.js"
+					"src/public/js/login/get-password.js",
+					"src/public/style/css/fonts/mui.ttf"
 				],
 				"refer": [
 					"src/views/login/modify-password.html"

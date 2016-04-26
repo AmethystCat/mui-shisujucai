@@ -54,7 +54,7 @@ mui.plusReady(function(){
 				console.log(res.msg);	
 				if(res.code === 0) {
 					mui.openWindow({
-						url: '/src/views/home/index.html'
+						url: '/src/views/login/login.html'
 					});
 				}
 				if(res.code !== 0) {

@@ -17,3 +17,5 @@ mui('.ss-bar-tab').on('tap', '.mui-tab-item', function(e){
 		url: href
 	});
 });
+
+H.common.backQuit();
