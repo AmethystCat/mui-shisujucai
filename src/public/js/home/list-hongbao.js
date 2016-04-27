@@ -1,3 +1,6 @@
+var host = 'http://dev.laiweilai.com:8020',
+	listUrl = '/api/advertisements';
+	
 var mock = {
 	listData: [
 		{
@@ -11,105 +14,9 @@ var mock = {
 			money: 4000,
 			status: '可抢',
 			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
-		},
-		{
-			name: '首彩葡萄酒',
-			money: 2000,
-			status: '可抢',
-			num: 182
-		},
-		{
-			name: '时速无线',
-			money: 4000,
-			status: '可抢',
-			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
-		},
-		{
-			name: '首彩葡萄酒',
-			money: 2000,
-			status: '可抢',
-			num: 182
-		},
-		{
-			name: '时速无线',
-			money: 4000,
-			status: '可抢',
-			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
-		},
-		{
-			name: '首彩葡萄酒',
-			money: 2000,
-			status: '可抢',
-			num: 182
-		},
-		{
-			name: '时速无线',
-			money: 4000,
-			status: '可抢',
-			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
-		},
-		{
-			name: '首彩葡萄酒',
-			money: 2000,
-			status: '可抢',
-			num: 182
-		},
-		{
-			name: '时速无线',
-			money: 4000,
-			status: '可抢',
-			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
-		},
-		{
-			name: '首彩葡萄酒',
-			money: 2000,
-			status: '可抢',
-			num: 182
-		},
-		{
-			name: '时速无线',
-			money: 4000,
-			status: '可抢',
-			num: 100
-		},
-		{
-			name: '时速车展',
-			money: 5000,
-			status: '可抢',
-			num: 80
 		}
 	]
-}
+};
 
 var List = {
 	render: function(datas, callback){
@@ -145,3 +52,7 @@ List.render(mock.listData, function(){
 		});
 	});
 });
+
+//mui.ajax(url: host + listUrl, {
+//	
+//});

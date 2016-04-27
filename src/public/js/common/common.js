@@ -15,4 +15,13 @@ H.common.backQuit = function () {
 			}
 		}
 	};
-}
+};
+
+// 点击事件
+mui('.ss-bar-tab').on('tap', '.mui-tab-item', function(e){
+	e.preventDefault();
+	var href = this.getAttribute('href');
+	mui.openWindow({
+		url: href
+	});
+});

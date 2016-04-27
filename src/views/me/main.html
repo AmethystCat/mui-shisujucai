@@ -5,15 +5,73 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>我的主页</title>
     <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/main.css"/>
     <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav">
-	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-	    <h1 class="mui-title">我的主页</h1>
-	</header>
-	<div class="mui-content">
-	    some content ......
+	<nav class="ss-bar-tab mui-bar mui-bar-tab">
+	    <a href="/src/views/home/index.html" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-hongbao"></span>
+	        <span class="mui-tab-label">广告红包</span>
+	    </a>
+	    <a href="/src/views/wifi/main.html" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-wifi"></span>
+	        <span class="mui-tab-label">全民WIFI</span>
+	    </a>
+	    <a href="/src/views/earn/main.html" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-earn"></span>
+	        <span class="mui-tab-label">我的收益</span>
+	    </a>
+	    <a href="/src/views/me/main.html" class="mui-tab-item mui-active">
+	        <span class="mui-icon ss-icon-me"></span>
+	        <span class="mui-tab-label">我的主页</span>
+	    </a>
+	</nav>
+	<div class="mui-content ss-content">
+	    <div class="section-top">
+	    	<span class="share">分享</span>
+	    	<span class="vipflag">普通会员</span>
+	    	<div class="avatar-w">
+	    		<img src="../../public/images/avatar.jpg"/>
+	    	</div>
+	    	<div class="me-info-w">
+	    		<div class="name">balabalabala <i class="mui-icon mui-icon-arrowright"></i></div>
+	    		<div class="phone">18608010011 </div>
+	    		<div class="money">￥19200.00</div>
+	    		<div class="jczc">聚财资产<i class="mui-icon mui-icon-arrowright"></i></div>
+	    	</div>
+	    </div>
+	    <div class="section-menus-w cf">
+
+	    	    <ul class="mui-table-view">
+	    	        <li class="mui-table-view-cell">
+	    	            <a class="mui-navigate-right">
+	    	            	商家广告发布与管理
+	    	            </a>
+	    	        </li>
+	    	        <li class="mui-table-view-cell">
+	    	            <a class="mui-navigate-right">
+	    	            	收徒弟
+	    	            </a>
+	    	        </li>
+	    	        <li class="mui-table-view-cell">
+	    	            <a class="mui-navigate-right">
+	    	            	帮助中心
+	    	            </a>
+	    	        </li>
+	    	        <li class="mui-table-view-cell">
+	    	            <a class="mui-navigate-right">
+	    	            	设置
+	    	            </a>
+	    	        </li>
+	    	    </ul>
+	    		<button type="button" class="mui-btn-block ss-btn-logout">退出当前登录账号</button>
+	    </div>
+	    </div>
 	</div>
 </body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/me/main.js" type="text/javascript" charset="utf-8"></script>
 </html>

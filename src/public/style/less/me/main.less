@@ -1,0 +1,63 @@
+@import "../common/variable";
+@import "../common/component";
+@import "../common/iconfont";
+
+body {
+    background-color: #fff;
+}
+
+.ss-content {
+    @pc: #FFDA99;
+    background: transparent;    
+    .section-top {
+        position: relative;
+        height: 275/@f*@u;
+        background-color: @primary;
+        .me-info-w {
+            text-align: center;
+            color: lighten(@pc, 10%);
+        }
+
+        .avatar-w {
+            padding-top: 1rem;
+            text-align: center;
+            overflow: hidden;
+            
+            img {
+                display: inline-block;
+                width: 105/@f*@u;
+                height: 105/@f*@u;
+                border-radius: 50%;
+                margin: 10px auto;
+            }
+        }
+        .share {
+            position: absolute;
+            top: 5/@f*@u;
+            left: 20/@f*@u;
+            color: lighten(@pc, 10%);
+        }
+        .vipflag {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: (100/2+16)/@f*@u;
+            width: 80px;
+            height: 27px;
+            line-height: 27px;
+            padding-left: 5px;
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            background-color: rgba(0, 0, 0, .3);
+            color: lighten(@pc, 10%);
+        }
+    }
+    .section-menus-w {
+        .ss-btn-logout {
+            width: 86%;
+            margin: 18/@f*@u auto 0;
+            background-color: #EB4112;
+            color: #fff;
+        }
+    }
+}

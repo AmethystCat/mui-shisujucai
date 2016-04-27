@@ -12,10 +12,6 @@ mui.plusReady(function(){
 		var mobile = mui('#phone')[0].value,
 			password = mui('#password')[0].value;
 		
-		console.log(mobile);
-		console.log(password);
-		console.log(host + loginUrl);
-		
 		mui.ajax(host + loginUrl, {
 			data: {
 				mobile: mobile,
