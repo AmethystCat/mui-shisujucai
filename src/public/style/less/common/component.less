@@ -19,6 +19,24 @@ ul {
     list-style: none;
 }
 
+.ss-bar-nav {
+    @pc: #FFDA99;
+    box-shadow: none;
+    border-bottom: 1px solid #FEC75C;
+    background: url(../../../images/bg_bar.png) repeat-x center;
+    .ss-icon-left-nav {
+        font-size: (24/@f)*@u;
+        color: #fff;
+    }
+    .ss-title {
+        color: lighten(@pc, 10%);
+        font-size: (22/@f)*@u;
+    }
+    .mui-btn-link {
+        color: @pc-l;
+    }
+}
+
 .ss-bar-tab {
     &.mui-bar-tab {
         .mui-icon {
