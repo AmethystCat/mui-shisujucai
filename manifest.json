@@ -292,6 +292,15 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"src/views/me/main.html": {
+				"resources": [
+					"src/public/style/css/me/main.css",
+					"src/public/images/avatar.jpg",
+					"src/public/js/me/main.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {

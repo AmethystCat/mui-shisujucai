@@ -14,6 +14,30 @@ var mock = {
 			money: 4000,
 			status: '可抢',
 			num: 100
+		},
+		{
+			name: '时速无线',
+			money: 4000,
+			status: '可抢',
+			num: 100
+		},
+		{
+			name: '时速无线',
+			money: 4000,
+			status: '可抢',
+			num: 100
+		},
+		{
+			name: '时速无线',
+			money: 4000,
+			status: '可抢',
+			num: 100
+		},
+		{
+			name: '时速无线',
+			money: 4000,
+			status: '可抢',
+			num: 100
 		}
 	]
 };
