@@ -1,11 +1,29 @@
 var host = 'http://dev.laiweilai.com:8020',
 	loginUrl = '/api/user/login';
 
-mui.init({
-	statusBarBackground: '#FAA519'
+//mui.init({
+//	statusBarBackground: '#FAA519',
+//	preloadPages:[
+//  {
+//    url: '/src/views/login/regist.html',
+//    id: '/src/views/login/regist.html',
+//    styles:{
+//    	top:'45px',
+//      bottom: '0px'
+//    }
+//  }
+//],
+//	preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制
+//});
+
+mui.init();
+
+mui.ready(function () {
+	mui('#bg_img')[0].height = window.innerHeight;
 });
 
 mui.plusReady(function(){
+	
     console.log("当前页面URL："+plus.webview.currentWebview().getURL());
      
     mui('.ss-login-form').on('click', '.ss-btn-login', function () {

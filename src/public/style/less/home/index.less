@@ -10,12 +10,13 @@
 
     .ss-title {
         color: lighten(@pc, 10%);
-        font-size: (22/@f)*@u;
+        font-size: (19/@f)*@u;
     }
     .ss-icon-city {
         height: 44px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: lighten(@pc, 10%);
+        letter-spacing: 1px;
         &:after {
             content: '\e471';
             display: inline-block;
@@ -27,8 +28,8 @@
     .ss-btn-share {
         float: right;
         height: 44px;
-        line-height: 1.5;
-        font-size: 1.2rem;
+        line-height: 1.7;
+        font-size: 1rem;
         color: lighten(@pc, 10%);
     }
 }
@@ -41,11 +42,12 @@
         top: 44px;
         bottom: auto;
         width: 100%;
-        height: 85px;
+        height: 78px;
         background: @primary;
         box-shadow: none;
         .mui-tab-item {
             .mui-icon ~ .mui-tab-label {
+                font-size: 0.75rem;
                 color: lighten(@pc, 15%);
             }
             &.mui-active {
@@ -58,7 +60,7 @@
                 }
                 .mui-tab-label {
                     padding-top: 2/@f*@u;
-                    font-size: 1rem;
+                    font-size: 0.85rem;
                 }
             }
         }

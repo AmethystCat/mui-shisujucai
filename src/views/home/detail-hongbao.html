@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>红包详情</title>
-    <!--<link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../public/style/css/style.css"/>
     <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-	<!--<header class="mui-bar mui-bar-nav">
+	<header class="mui-bar mui-bar-nav">
 	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 	    <h1 class="mui-title">红包详情</h1>
-	</header>-->
+	</header>
 	<div class="mui-content">
 	    <div class="intro">
        <div class="intro-head">
          <img src="../../public/images/img/intro-img.png" alt="" class="intro-head-bg">
          <div class="intro-head-top">
-           <a href="javascript:void(0);"><img src="../../public/images/img/left-arrow.png" alt="" class="left-arrow fl"></a>
-           <a href="javascript:void(0);"><img src="../../public/images/img/intro-icon1.png" alt="" class="intro-icon fr"></a>
-           <a href="javascript:void(0);"><img src="../../public/images/img/intro-icon2.png" alt="" class="intro-icon fr"></a>
+           <!--<a href="javascript:void(0);"><img src="../../public/images/img/left-arrow.png" alt="" class="left-arrow fl"></a>-->
+           <!--<a href="javascript:void(0);"><img src="../../public/images/img/intro-icon1.png" alt="" class="intro-icon fr"></a>-->
+           <!--<a href="javascript:void(0);"><img src="../../public/images/img/intro-icon2.png" alt="" class="intro-icon fr"></a>-->
          </div>
          <div class="intro-head-l">
            <div class="font14rem">首彩葡萄酒</div>
-           <div>最大红包<span>￥2000</span>元</div>
+           <div style="font-size: 1rem;">最大红包<span>￥2000</span>元</div>
          </div>
          <div class="intro-head-r">
-           <div>可抢</div>
-           <div>还有<span>182</span>个红包</div>
+           <div style="font-size: 1rem;">可抢</div>
+           <div style="font-size: 1rem;">还有<span>182</span>个红包</div>
          </div>
        </div>
 
@@ -45,29 +45,32 @@
          <div class="intro-foot-tit">请选择正确的答案参与看广告抢红包</div>
          <p>
            <span class="test-tit">首彩拥有以下哪个系列葡萄酒代理权</span>
-           A.KAJDLFKAJDFA</br>
-           B.KAJDLFKAJDFA</br>
-           C.KAJDLFKAJDFA</br>
-           D.KAJDLFKAJDFA
+           <ul class="question-list">
+           	<li>A.KAJDLFKAJDFA</li>
+           	<li>B.KAJDLFKAJDFA</li>
+           	<li>C.KAJDLFKAJDFA</li>
+           	<li>D.KAJDLFKAJDFA</li>
+           </ul>
            <div class="test-answer display-flex">
              <a href="javascript:void(0);" class="flex1">A</a>
              <a href="javascript:void(0);" class="flex1">B</a>
              <a href="javascript:void(0);" class="flex1">C</a>
              <a href="javascript:void(0);" class="flex1">D</a>
            </div>
-           <div class="display-flex">
-             <input type="submit" value="确认提交答案" class="flex1">
+           <div class="display-flex btn-submit-w">
+             	<!--<input class="mui-btn-block mui-btn" type="submit" value="确认提交答案" class="flex1">-->
+             	<button class="mui-btn-block btn-confirm-ans">确认提交答案</button>
            </div>
            <div class="tc intro-tips">
              选择错误答案 将无法领取红包
            </div>  
            <div class="intro-link display-flex">
              <a href="#" class="tc flex1">
-               <div style="background:#FAA519 url(../../public/images/img/intro-icon1.png) no-repeat center center;background-size:2.2rem auto;"></div>             
+               <div style="background:#FAA519 url(../../public/images/img/intro-icon1.png) no-repeat center center;background-size:1.5rem auto;"></div>             
                <span>转发</span>
              </a>
              <a href="#" class="tc flex1 ">
-               <div style="background:#FAA519 url(../../public/images/img/intro-icon2.png) no-repeat center center;background-size:2.2rem auto;"></div>     
+               <div style="background:#FAA519 url(../../public/images/img/intro-icon2.png) no-repeat center center;background-size:1.5rem auto;"></div>     
                <span>跳转链接</span>
              </a>
            </div> 
@@ -76,4 +79,10 @@
      </div>
 	</div>
 </body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
 </html>

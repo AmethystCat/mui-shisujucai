@@ -1,8 +1,4 @@
 @charset "utf-8";
-body {
-  font-family: "arial, helvetica, sans-serif";
-  background: #FAA519;
-}
 ul {
   padding: 0;
   list-style: none;
@@ -59,6 +55,19 @@ ul {
 .tc {
   text-align: center;
 }
+.mui-bar-tab .mui-tab-item .ss-icon-hongbao {
+  width: 22px;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-earn {
+  width: 28px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+  top: 5px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label {
+  height: 21px;
+  padding-top: 1px;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
@@ -74,52 +83,62 @@ ul {
 .icon-close:before {
   content: "\e602";
 }
-body {
-  background-color: #fff;
-}
 .ss-content {
   background: transparent;
   overflow: auto;
 }
 .ss-content .section-top {
   position: relative;
-  height: 17.8125rem;
-  background-color: #FAA519;
+  height: 18.4375rem;
+  background-image: -moz-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -ms-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -o-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffbe36), to(#fd9426));
+  background-image: -webkit-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: linear-gradient(top, #ffbe36, #fd9426);
 }
 .ss-content .section-top .me-info-w {
   text-align: center;
   color: #ffedcc;
 }
 .ss-content .section-top .me-info-w .name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+}
+.ss-content .section-top .me-info-w .name span {
+  padding-left: 12px;
 }
 .ss-content .section-top .me-info-w .phone {
-  padding: 0.25rem 0 0.5rem 0;
+  padding: 0 0 0.875rem 0;
   font-size: 1.1rem;
 }
 .ss-content .section-top .me-info-w .money {
   color: #fff;
   font-size: 2rem;
+  padding-right: 10px;
 }
 .ss-content .section-top .me-info-w .jczc {
-  padding: 0.625rem 0;
-  font-size: 0.9rem;
+  padding: 0.625rem 0 0.5rem 0;
+  font-size: 1rem;
 }
 .ss-content .section-top .me-info-w .jczc i {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #fff;
 }
 .ss-content .section-top .avatar-w {
-  padding-top: 0.75rem;
+  padding-top: 1.6875rem;
   text-align: center;
   overflow: hidden;
 }
 .ss-content .section-top .avatar-w img {
   display: inline-block;
-  width: 6.5625rem;
-  height: 6.5625rem;
+  width: 6.25rem;
+  height: 6.25rem;
   border-radius: 50%;
+  border: 1px solid #fff;
   margin: 10px auto;
+}
+.ss-content .section-top .avatar-w--info {
+  background: #fbfbfb;
 }
 .ss-content .section-top .share {
   position: absolute;
@@ -158,12 +177,12 @@ body {
   overflow: hidden;
 }
 .ss-content .section-top .guangbo-w p {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   color: #ffedcc;
 }
 .ss-content .section-top-info {
   height: 9.4375rem;
-  background-color: #fbfbfb;
+  background: #fbfbfb;
 }
 .ss-content .section-menus-w {
   float: left;
@@ -211,7 +230,15 @@ body {
   padding: 0;
   height: 20px;
 }
+.ss-content .section-menus-w__info-shouhuo-modify .mui-input-row input::-webkit-input-placeholder {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
 .ss-content .section-menus-w__info-shouhuo-modify .address-shouhuo {
   padding: 0;
   border: none;
+}
+.ss-content .section-menus-w .mui-table-view-cell > a:not(.mui-btn) {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
 }

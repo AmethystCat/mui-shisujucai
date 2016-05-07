@@ -1,8 +1,4 @@
 @charset "utf-8";
-body {
-  font-family: "arial, helvetica, sans-serif";
-  background: #FAA519;
-}
 ul {
   padding: 0;
   list-style: none;
@@ -59,6 +55,19 @@ ul {
 .tc {
   text-align: center;
 }
+.mui-bar-tab .mui-tab-item .ss-icon-hongbao {
+  width: 22px;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-earn {
+  width: 28px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+  top: 5px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label {
+  height: 21px;
+  padding-top: 1px;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
@@ -74,10 +83,12 @@ ul {
 .icon-close:before {
   content: "\e602";
 }
+body {
+  min-height: 400px;
+}
 .ss-bar-nav {
   box-shadow: none;
   border-bottom: 1px solid #FEC75C;
-  background: url(../../images/bg_bar.png) repeat-x center;
 }
 .ss-bar-nav .ss-icon-left-nav {
   font-size: 1.5rem;
@@ -88,7 +99,25 @@ ul {
   font-size: 1.375rem;
 }
 .ss-content {
+  position: relative;
   background: none;
+}
+.ss-content .bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  height: 667px;
+  background-image: -moz-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -ms-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -o-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffbe36), to(#fd9426));
+  background-image: -webkit-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: linear-gradient(top, #ffbe36, #fd9426);
+}
+.ss-content .bg img {
+  display: block;
+  width: 100%;
 }
 .ss-content p {
   margin: 0;
@@ -98,13 +127,27 @@ ul {
 .ss-content .tip {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  top: 37.5rem;
   z-index: 0;
+}
+.ss-content .tip p {
+  line-height: 18px;
+}
+.ss-content--regist {
+  position: static;
+}
+.ss-content .logo-c {
+  position: relative;
+  z-index: 2;
+  height: 100px;
+  margin-top: 11rem;
+  background: url(../../../public/images/login/logo2.png) no-repeat center;
+  background-size: contain;
 }
 .ss-login-form {
   position: relative;
   z-index: 1;
-  background: #FAA519;
+  background: transparent;
 }
 .ss-login-form .input-w {
   padding: 0.9375rem 1.5625rem 0 1.5625rem;
@@ -136,7 +179,7 @@ ul {
   width: 100%;
   height: 2.6875rem;
   border: 1px solid #FFE5BD;
-  background: #FEBF5A;
+  background: rgba(255, 255, 255, 0.1);
   letter-spacing: 1px;
   color: #ffedcc;
   font-weight: 300;
@@ -150,6 +193,7 @@ ul {
   right: 1.5625rem;
   top: 0.4375rem;
   width: 8.625rem;
+  font-size: 1rem;
 }
 .ss-login-form .input-w .ss-btn-sendCode.sending {
   font-size: 1rem;

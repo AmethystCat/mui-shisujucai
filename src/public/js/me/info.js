@@ -20,4 +20,25 @@ mui.ready(function () {
 			id: rootPath + 'me/info-shouhuo-modify.html'
 		});
 	});
+	
+	mui('.mui-table-view').on('click', '#m-name', function () {
+		mui.openWindow({
+			url: rootPath + 'me/info-shouhuo-modify.html',
+			id: rootPath + 'me/info-shouhuo-modify.html'
+		});
+	});
+	
+	mui('.mui-table-view').on('click', '#m-sex', function () {
+		mui.openWindow({
+			url: rootPath + 'me/info-shouhuo-modify.html',
+			id: rootPath + 'me/info-shouhuo-modify.html'
+		});
+	});
+	
+	mui('.mui-table-view').on('click', '#m-birth', function () {
+		mui.openWindow({
+			url: rootPath + 'me/info-shouhuo-modify.html',
+			id: rootPath + 'me/info-shouhuo-modify.html'
+		});
+	});
 });

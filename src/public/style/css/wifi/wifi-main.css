@@ -1,8 +1,4 @@
 @charset "utf-8";
-body {
-  font-family: "arial, helvetica, sans-serif";
-  background: #FAA519;
-}
 ul {
   padding: 0;
   list-style: none;
@@ -59,6 +55,19 @@ ul {
 .tc {
   text-align: center;
 }
+.mui-bar-tab .mui-tab-item .ss-icon-hongbao {
+  width: 22px;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-earn {
+  width: 28px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+  top: 5px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label {
+  height: 21px;
+  padding-top: 1px;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
@@ -78,6 +87,18 @@ h3,
 h4 {
   color: #5d5757;
 }
+.ss-mui-icon-left-nav {
+  color: #FAA519;
+  padding-top: 5px;
+}
+.ss-mui-icon-left-nav img {
+  width: 35px;
+  height: 35px;
+}
+.ss-mui-icon-left-nav + .ss-title {
+  padding-top: 1px;
+  color: #FAA519;
+}
 .btn-buy {
   position: fixed;
   bottom: 50px;
@@ -90,6 +111,7 @@ h4 {
   background-color: #FAA519;
   color: #fff;
   z-index: 1001;
+  font-size: 1rem;
 }
 .ss-content {
   position: relative;
@@ -99,41 +121,65 @@ h4 {
   display: block;
   width: 100%;
 }
-.price-w {
-  padding-top: 10px;
-}
 .price-w .tt {
+  position: relative;
+  height: 5.75rem;
   padding-bottom: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+.price-w .tt:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -10.625rem;
+  width: 21.25rem;
+  height: 1px;
+  background: #d4d4d4;
 }
 .price-w .share-w {
   float: right;
-  padding: 0 15px;
+  margin-top: 0.875rem;
+  padding: 0 15.7px;
+  width: 4.125rem;
+  height: 3.125rem;
   border-left: 1px solid #ccc;
+  overflow: hidden;
 }
 .price-w .share-w .btn-share {
   display: block;
-  padding-top: 40px;
-  background: url(../../../images/icon-share.png) no-repeat center top;
-  color: #ccc;
+  padding-top: 30px;
+  padding-left: 3px;
+  background: url(../../../images/item_btn_share_n.png) no-repeat center top;
+  background-size: 80%;
+  font-size: 0.9rem;
+  color: #838383;
 }
 .price-w .price-info-w {
-  padding-left: 10px;
+  padding-left: 12px;
 }
 .price-w .price-info-w .wifi-name {
-  font-size: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.375rem;
+  font-size: 1.05rem;
+  color: #4f4f4f;
 }
 .price-w .price-info-w .price-current {
-  color: red;
+  font-size: 1.2rem;
+  color: #EF3535;
 }
 .price-w .price-info-w .price-origin {
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
   text-decoration: line-through;
-  color: #ccc;
+  color: #838383;
 }
 .price-w .price-info-w .xl {
-  font-size: 0.8rem;
-  color: #ccc;
+  font-size: 0.7rem;
+  color: #838383;
+}
+.price-w .wifi-info-w .title {
+  padding-bottom: 1rem;
 }
 .price-w .wifi-info-w .img-hr {
   margin-bottom: 25px;

@@ -7,7 +7,12 @@ mui.init({
 	styles:{
         top:'45px',
         bottom: '0px'
-     }
+    }
+});
+
+mui.ready(function () {
+	mui('#bg_img')[0].style.height = window.innerHeight + 'px';
+	mui('#bg_img')[0].style.width = window.innerWidth + 'px';
 });
 
 mui.plusReady(function(){
@@ -73,6 +78,11 @@ mui.plusReady(function(){
 	});
 	
 	mui('.ss-login-form').on('click', '.ss-btn-sendCode', function () {
+		var mobile = mui('#phone')[0].value;
+		if(!H.isMobile(mobile)) {
+				errorMes.innerHTML="手机号格式不正确";
+				return;
+			}
 		mui('.error-mes')[0].innerHTML = '';
 		if (this.className.indexOf('sending') !== -1) return false;
 		console.log(this);

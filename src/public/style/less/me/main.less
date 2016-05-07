@@ -2,53 +2,64 @@
 @import "../common/component";
 @import "../common/iconfont";
 
-body {
-    background-color: #fff;
-}
-
 .ss-content {
     @pc: #FFDA99;
     background: transparent; 
     overflow: auto;   
     .section-top {
         position: relative;
-        height: 285/@f*@u;
-        background-color: @primary;
+        height: 295/@f*@u;
+//      background-color: @primary;
+        background-image: -moz-linear-gradient(top, #ffbe36, #fd9426);
+        background-image: -ms-linear-gradient(top, #ffbe36, #fd9426);
+        background-image: -o-linear-gradient(top, #ffbe36, #fd9426);
+        background-image: -webkit-gradient(linear, center top, center bottom, from(#ffbe36), to(#fd9426));
+        background-image: -webkit-linear-gradient(top, #ffbe36, #fd9426);
+        background-image: linear-gradient(top, #ffbe36, #fd9426);
         .me-info-w {
             text-align: center;
             color: lighten(@pc, 10%);
             .name {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+                span {
+                    padding-left: 12px;
+                }
             }
             .phone {
-                padding: 4/@f*@u 0 8/@f*@u 0;
+                padding: 0 0 14/@f*@u 0;
                 font-size: 1.1rem;
             }
             .money {
                 color: #fff;
                 font-size: 2rem;
+                padding-right: 10px;
             }
             .jczc {
-                padding: 10/@f*@u 0;
-                font-size: 0.9rem;
+                padding: 10/@f*@u 0 8/@f*@u 0;
+                font-size: 1rem;
                  i {
-                     font-size: 1.2rem;
+                     font-size: 1.4rem;
                      color: #fff;
                  }
             }
         }
 
         .avatar-w {
-            padding-top: 0.75rem;
+            padding-top: 27/@f*@u;
             text-align: center;
             overflow: hidden;
             
             img {
                 display: inline-block;
-                width: 105/@f*@u;
-                height: 105/@f*@u;
+                width: 100/@f*@u;
+                height: 100/@f*@u;
                 border-radius: 50%;
+                border: 1px solid #fff;
                 margin: 10px auto;
+            }
+            
+            &--info {
+                background: #fbfbfb;
             }
         }
         .share {
@@ -87,14 +98,14 @@ body {
             height: 25px;
             overflow: hidden;
             p {
-                font-size: 0.5rem;
+                font-size: 0.8rem;
                 color: @pc-l;
             }
         }
         
         &-info {
             .remH(151);
-            background-color: #fbfbfb;
+            background: #fbfbfb;
         }
     }
     .section-menus-w {
@@ -151,12 +162,21 @@ body {
                         padding: 0;
                         height: 20px;
                     }
+                    input::-webkit-input-placeholder {
+                        font-size: 1rem;
+                        letter-spacing: 1px;
+                    }
                 }
                 .address-shouhuo {
                     padding: 0;
                     border: none
                 }
             }
+        }
+        
+        .mui-table-view-cell>a:not(.mui-btn) {
+            font-size: 1rem;
+            color: rgba(0,0,0,0.6);
         }
     }
 }

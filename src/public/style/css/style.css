@@ -107,8 +107,8 @@ a:visited {
   text-align: center;
 }
 .font14rem {
-  font-size: 1.4rem;
-  line-height: 2.3rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 .font12rem {
   font-size: 1.2rem;
@@ -148,6 +148,13 @@ a:visited {
   -moz-flex-grow: 1;
   flex-grow: 1;
   flex: 1;
+  font-size: 1rem;
+}
+.flex1:first-child {
+  margin-left: 0;
+}
+.flex1:last-child {
+  margin-right: 0;
 }
 .flex2 {
   -moz-box-flex: 2.0;
@@ -322,32 +329,33 @@ a:visited {
   margin-top: 2rem;
 }
 .intro-foot-tit {
-  height: 4rem;
-  line-height: 4rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   color: #fff;
   background: #FAA519;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
+  letter-spacing: 1px;
 }
 .intro-foot p {
   margin: 0 2rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #626262;
 }
 .test-tit {
-  padding: 1rem 0;
+  padding: 1.1875rem 0 0.8rem 0;
   display: block;
 }
 .test-answer {
-  padding: 1.5rem 2rem;
+  padding: 0 2rem 1.25rem 2rem;
   font-size: 1.4rem;
   text-align: center;
 }
 .test-answer a {
   display: block;
-  margin: 0 1rem;
-  height: 3.4rem;
-  line-height: 3.4rem;
+  margin: 0 0.6rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
   border: 1px solid #CBCBCB;
   border-radius: 6px;
   font-weight: bold;
@@ -379,8 +387,8 @@ a:visited {
 }
 .intro-link > a > div {
   margin: 0 auto;
-  width: 4.1rem;
-  height: 4.1rem;
+  width: 2.6875rem;
+  height: 2.6875rem;
   border-radius: 50%;
 }
 .intro-link span {
@@ -433,4 +441,22 @@ a:visited {
 }
 .order-foot-all .black-txt2 {
   margin-right: 3px;
+}
+.question-list {
+  padding-left: 2rem;
+  margin-bottom: 1.25rem;
+}
+.question-list li {
+  margin-bottom: 0.5rem;
+  color: #8f8f8f;
+}
+.btn-submit-w {
+  padding-bottom: 1rem;
+}
+.btn-confirm-ans {
+  margin: 0 2rem;
+  height: 2.8125rem;
+  line-height: 1rem;
+  background: #FAA519;
+  color: #fff;
 }

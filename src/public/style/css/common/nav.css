@@ -1,0 +1,13 @@
+.ss-bar-nav {
+  box-shadow: none;
+  border-bottom: 1px solid #FEBC58;
+  background: url('../../../images/bg_bar.png') repeat-x center;
+}
+.ss-bar-nav .ss-title {
+  color: #ffedcc;
+  font-size: 1.1875rem;
+}
+.ss-bar-nav .ss-icon-left-nav {
+  font-size: 1.5rem;
+  color: #fff;
+}

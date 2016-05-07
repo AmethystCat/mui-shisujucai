@@ -3,7 +3,7 @@ mui.init({
         id: 'list-hongbao',
         url: 'list-hongbao.html',
         styles: {
-            top: '130px',
+            top: '125px',
             bottom: '50px',
             bounce: 'vertical'
         }

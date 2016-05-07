@@ -1,8 +1,4 @@
 @charset "utf-8";
-body {
-  font-family: "arial, helvetica, sans-serif";
-  background: #FAA519;
-}
 ul {
   padding: 0;
   list-style: none;
@@ -59,6 +55,19 @@ ul {
 .tc {
   text-align: center;
 }
+.mui-bar-tab .mui-tab-item .ss-icon-hongbao {
+  width: 22px;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-earn {
+  width: 28px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+  top: 5px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label {
+  height: 21px;
+  padding-top: 1px;
+}
 body {
   background: #fff;
 }
@@ -91,6 +100,7 @@ body {
 .ss-content--list-hongbao a .text1 {
   left: 0;
   padding-left: 0.625rem;
+  line-height: 1.3;
 }
 .ss-content--list-hongbao a .text1 .hongbao-name {
   font-size: 1.4rem;
@@ -99,4 +109,7 @@ body {
   right: 0;
   text-align: right;
   padding-right: 0.625rem;
+}
+.ss-content--list-hongbao .list-item-hongbao {
+  background: url(../../../images/hongbaoinfo_bg.png) no-repeat center bottom;
 }

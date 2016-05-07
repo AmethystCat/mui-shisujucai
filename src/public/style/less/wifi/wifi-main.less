@@ -7,11 +7,27 @@ h4 {
     color: #5d5757;
 }
 
+.ss-mui-icon-left-nav {
+//  background: url(../../../images/nav(white)_btn_back_n.png) no-repeat center;
+    color: @nav-arrow-c;
+    padding-top: 5px;
+    img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    & + .ss-title {
+        padding-top: 1px;
+        color: @nav-arrow-c;
+    }
+}
+
 .btn-buy {
     position: fixed;
     bottom: 50px;
     width: 100%;
     height: 42px;
+//  line-height: 35px;
     border-radius: 0;
     border: none;
     border-top: #ccc;
@@ -19,6 +35,7 @@ h4 {
     background-color: @primary;
     color: #fff;
     z-index: 1001;
+    font-size: 1rem;
 }
     
 .ss-content {
@@ -31,45 +48,73 @@ h4 {
 }
 .price-w {
     @pad: 10px;
-    padding-top: @pad;
+//  padding-top: @pad;
     
     .tt {
+        position: relative;
+        .remH(92);
         padding-bottom: @pad;
-        margin-bottom: @pad*2;
-        border-bottom: 1px solid #ccc;
+        margin-bottom: @pad*4;
+//      border-bottom: 1px solid #ccc;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -170/@f*@u;
+            .remW(340);
+            height: 1px;
+            background: #d4d4d4;
+        }
     }
     .share-w {
         float: right;
-        padding: 0 @pad*1.5;
+        margin-top: 14/@f*@u;
+        padding: 0 @pad*1.57;
+        width: 66/@f*@u;
+        height: 50/@f*@u;
         border-left: 1px solid #ccc;
+        overflow: hidden;
         .btn-share {
             display: block;
-            padding-top: 40px;
-            background: url(../../../images/icon-share.png) no-repeat center top;    
-            color: #ccc;
+            padding-top: 30px;
+            padding-left: 3px;
+            background: url(../../../images/item_btn_share_n.png) no-repeat center top;   
+            background-size: 80%;
+            font-size: 0.9rem; 
+            color: #838383;
         }
     }
     .price-info-w {
-        padding-left: @pad;
+        padding-left: @pad*1.2;
         
         .wifi-name {
-            font-size: 1rem;
+            padding-top: 12/@f*@u;
+            padding-bottom: 6/@f*@u;
+            font-size: 1.05rem;
+            color: #4f4f4f;
         }
         .price {
             &-current {
-                color: red;
+                font-size: 1.2rem;
+                color: #EF3535;
             }
             &-origin {
+                padding-left: 0.5rem;
+                font-size: 0.8rem;
                 text-decoration: line-through;
-                color: #ccc;
+                color: #838383;
             }
         }
         .xl {
-            font-size: 0.8rem;
-            color: #ccc;
+            font-size: 0.7rem;
+            color: #838383;
         }
     }
     .wifi-info-w {
+        .title {
+            padding-bottom: 1rem;
+        }
         .img-hr {
             margin-bottom: @pad*2.5;
         }
