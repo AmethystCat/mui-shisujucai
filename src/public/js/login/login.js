@@ -58,7 +58,11 @@ mui.plusReady(function(){
 
 	mui('.ss-login-form').on('click', '.ss-btn-resgist', function () {
 		mui.openWindow({
-			url: '/src/views/login/regist.html'
+			url: '/src/views/login/regist.html',
+			id: 'regist.html',
+			waiting: {
+				autoShow: false
+			}
 		});
 	});
 	
