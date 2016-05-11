@@ -8,10 +8,18 @@ mui.init({
 	}
 });
 
-(function () {
-	setTimeout(function () {
+mui.ready(function(){
+	mui('.mui-content').on('click', '#jump', function(){
 		mui.openWindow({
-			url: '/src/views/login/login.html'
+			url: '/src/views/home/index.html'
 		});
-	}, 2000);
+	});
+	
+	(function () {
+		setTimeout(function () {
+			mui.openWindow({
+				url: '/src/views/home/index.html'
+			});
+		}, 4000);
+	});
 });

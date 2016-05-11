@@ -16,15 +16,18 @@ var host = 'http://dev.laiweilai.com:8020',
 //	preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制
 //});
 
-mui.init();
+mui.init({
+	styles:{
+        top:'45px',
+        bottom: '0px'
+    }
+});
 
 mui.ready(function () {
 	mui('#bg_img')[0].height = window.innerHeight;
 });
 
 mui.plusReady(function(){
-	
-    console.log("当前页面URL："+plus.webview.currentWebview().getURL());
      
     mui('.ss-login-form').on('click', '.ss-btn-login', function () {
 		var mobile = mui('#phone')[0].value,

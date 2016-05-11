@@ -112,7 +112,6 @@ mui.plusReady(function(){
 		});
 	});
 	
-	
 });
 
 
