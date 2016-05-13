@@ -16,13 +16,14 @@ mui.ready(function () {
 });
 
 mui.plusReady(function(){
+	var errorMes = mui('.error-mes')[0];
 	mui('.ss-login-form').on('click', '.ss-btn-resgist', function () {
 		var mobile = mui('#phone')[0].value,
 			password = mui('#password')[0].value,
 			passConfirm = mui('#passConfirm')[0].value;
 			code = mui('#validationNum')[0].value,
 			inviter = mui('#invitePhone')[0].value;
-			errorMes = mui('.error-mes')[0];
+			
 			
 			if(!H.isMobile(mobile)) {
 				errorMes.innerHTML="手机号格式不正确";

@@ -7,6 +7,7 @@
 		<title></title>
 		<link href="../../public/style/css/common/mui.min.css" rel="stylesheet" />
 		<link href="../../public/style/css/common/mui.indexedlist.css" rel="stylesheet" />
+		<link href="../../public/style/css/home/city-list.css" rel="stylesheet" />
 		<style>
 			html,
 			body {
@@ -21,14 +22,23 @@
 	</head>
 
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">城市定位</h1>
+		<header class="mui-bar mui-bar-nav ss-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+			<h1 class="mui-title ss-title">城市定位</h1>
 		</header>
 		<div class="mui-content">
+			<div class="bg" id="bg_img">
+				<!--<img  src="../../public/images/login/orange_bg.png"/>-->
+			</div>
 			<div id='list' class="mui-indexed-list">
 				<div class="mui-indexed-list-search mui-input-row mui-search">
 					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="请输入城市或拼音查询">
+				</div>
+				<div class="locate-w">
+					<span>都江堰市</span>
+					&nbsp;
+					<span>GPS定位</span>
+					<button type="button" id="cities">click</button>
 				</div>
 				<div class="mui-indexed-list-bar">
 					<a>A</a>
@@ -247,8 +257,12 @@
 				</div>
 			</div>
 		</div>
-		<script src="../../public/js/libs/mui.min2.js"></script>
+		<script src="../../public/js/libs/mui.min.js"></script>
+		<script src="../../public/js/common/base.js"></script>
+		<script src="../../public/js/common/common.js"></script>
+		<script src="../../public/js/common/rem.js"></script>
 		<script src="../../public/js/common/mui.indexedlist.js"></script>
+		<script src="../../public/js/home/city-list.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
 			mui.ready(function() {

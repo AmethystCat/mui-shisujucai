@@ -1,2 +1,78 @@
 @import "../common/variable";
 @import "../common/component";
+.ss-bar-nav {
+    background-image: none;
+    background-color: transparent;
+}
+
+.mui-indexed-list {
+    border-top: 1px solid #FFC85D;
+    background-color: transparent;
+}
+.mui-indexed-list-search {
+    background-color: #FFC149;
+    padding: 0.5rem;
+    border-bottom: 0;
+    input {
+        .remH(28);
+        border-radius: 6px;
+        background: #fff;    
+    }
+    .mui-placeholder {
+        .remH(45);
+        line-height: 2.8125rem;
+        span + span {
+            font-size: 13px;
+        }
+    }
+}
+.mui-search.mui-active:before {
+    left: 1rem;
+}
+.mui-icon .mui-icon-search + span {
+    font-size: 16px;
+}
+.mui-input-row.mui-search .mui-icon-clear {
+    top: 11/@f*@u;
+}
+.mui-indexed-list-group {
+    background-color: #FEBB46;    
+}
+.mui-indexed-list-bar {
+    margin-top: 45px;
+    background-color: transparent;
+    a {
+        color: #fff;
+    }
+    &.active {
+        color: #fff;
+        background-color: initial;
+        a {
+            color: #fff;
+        }
+    }
+}
+.mui-table-view {
+    background-color: transparent;
+    color: @pc-l;
+}
+.mui-table-view-cell:after {
+    right: 25px;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.mui-table-view-divider {
+    margin-right: 25px;
+    color: #fff;
+    &:before, &:after {
+        background: none;
+    }
+}
+.mui-indexed-list-empty-alert {
+    color: #fff;
+}
+.locate-w {
+    padding: 5px 15px;
+    font-size: 14px;
+    color: @pc-l;
+}

@@ -68,3 +68,108 @@ ul {
   height: 21px;
   padding-top: 1px;
 }
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 667px;
+  background-image: -moz-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -ms-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -o-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffbe36), to(#fd9426));
+  background-image: -webkit-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: linear-gradient(top, #ffbe36, #fd9426);
+}
+.bg img {
+  display: block;
+  width: 100%;
+}
+.bg .logo-c {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 200px;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -100px;
+  background: url(../../../public/images/login/logo2.png) no-repeat center;
+  background-size: contain;
+}
+.ss-bar-nav {
+  background-image: none;
+  background-color: transparent;
+}
+.mui-indexed-list {
+  border-top: 1px solid #FFC85D;
+  background-color: transparent;
+}
+.mui-indexed-list-search {
+  background-color: #FFC149;
+  padding: 0.5rem;
+  border-bottom: 0;
+}
+.mui-indexed-list-search input {
+  height: 1.75rem;
+  border-radius: 6px;
+  background: #fff;
+}
+.mui-indexed-list-search .mui-placeholder {
+  height: 2.8125rem;
+  line-height: 2.8125rem;
+}
+.mui-indexed-list-search .mui-placeholder span + span {
+  font-size: 13px;
+}
+.mui-search.mui-active:before {
+  left: 1rem;
+}
+.mui-icon .mui-icon-search + span {
+  font-size: 16px;
+}
+.mui-input-row.mui-search .mui-icon-clear {
+  top: 0.6875rem;
+}
+.mui-indexed-list-group {
+  background-color: #FEBB46;
+}
+.mui-indexed-list-bar {
+  margin-top: 45px;
+  background-color: transparent;
+}
+.mui-indexed-list-bar a {
+  color: #fff;
+}
+.mui-indexed-list-bar.active {
+  color: #fff;
+  background-color: initial;
+}
+.mui-indexed-list-bar.active a {
+  color: #fff;
+}
+.mui-table-view {
+  background-color: transparent;
+  color: #ffedcc;
+}
+.mui-table-view-cell:after {
+  right: 25px;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.mui-table-view-divider {
+  margin-right: 25px;
+  color: #fff;
+}
+.mui-table-view-divider:before,
+.mui-table-view-divider:after {
+  background: none;
+}
+.mui-indexed-list-empty-alert {
+  color: #fff;
+}
+.locate-w {
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #ffedcc;
+}

@@ -23,39 +23,40 @@ mui.init({
     }
 });
 
-mui.ready(function () {
-	mui('#bg_img')[0].height = window.innerHeight;
-});
-
 mui.plusReady(function(){
      
     mui('.ss-login-form').on('click', '.ss-btn-login', function () {
 		var mobile = mui('#phone')[0].value,
 			password = mui('#password')[0].value;
 		
-		mui.ajax(host + loginUrl, {
-			data: {
-				mobile: mobile,
-				password: password
-			},
-			dataType: 'json',//服务器返回json格式数据
-			type: 'post',//HTTP请求类型
-			timeout: 10000,//超时时间设置为10秒；
-			success: function(res){
-				if(res.code === 0) {
-					mui.openWindow({
-						url: '/src/views/home/index.html'
-					});
-				} else {
-					mui('.error-mes')[0].innerHTML = res.message;			
-				}			
-			},
-			error: function(xhr, type, errorThrown){
-				console.log(xhr);
-				console.log(type);
-				console.log(errorThrown);
-			}
+		mui.openWindow({
+			url: '/src/views/home/index.html',
+			id: '/src/views/home/index.html'
 		});
+		
+//		mui.ajax(host + loginUrl, {
+//			data: {
+//				mobile: mobile,
+//				password: password
+//			},
+//			dataType: 'json',//服务器返回json格式数据
+//			type: 'post',//HTTP请求类型
+//			timeout: 10000,//超时时间设置为10秒；
+//			success: function(res){
+//				if(res.code === 0) {
+//					mui.openWindow({
+//						url: '/src/views/home/index.html'
+//					});
+//				} else {
+//					mui('.error-mes')[0].innerHTML = res.message;			
+//				}			
+//			},
+//			error: function(xhr, type, errorThrown){
+//				console.log(xhr);
+//				console.log(type);
+//				console.log(errorThrown);
+//			}
+//		});
 		
 	});
 
@@ -64,7 +65,7 @@ mui.plusReady(function(){
 			url: '/src/views/login/regist.html',
 			id: 'regist.html',
 			waiting: {
-				autoShow: false
+				autoShow: true
 			}
 		});
 	});
