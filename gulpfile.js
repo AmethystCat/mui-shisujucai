@@ -31,7 +31,7 @@ gulp.task('watch', function () {
 	
 	gulp.watch(CSS).on('change', function (e) {
 		console.log(e.path + ' changed...')
-		bs.reload(CSS);
+		bs.reload();
 	});
 	
 	gulp.watch(JS).on('change', function (e) {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>帮助中心</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/component.css"/>
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav ss-bar-nav" style="background: transparent;">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+	    <h1 class="mui-title ss-title">帮助中心</h1>
+	</header>
+	<div class="mui-content" style="padding-top: 0;">
+	    <img id="help" src="../../public/images/me/help info.png" style="display: block; width: 100%;"/>
+	</div>
+</body>
+<script>
+	mui.ready(function () {
+		mui.init({
+			styles: {
+				top: '0',
+				bottom: '0px'
+			}
+		})
+	   	mui('#help')[0].style.height = window.innerHeight + 'px';
+	});
+</script>
+</html>

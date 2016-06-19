@@ -1,28 +1,25 @@
 {
-	"@platforms": ["android", "iPhone", "iPad"],
-	"id": "H5ECBDC58",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "时速聚财",/*应用名称，程序桌面图标名称*/
+	"@platforms": ["android", "iPhone"],
+	"id": "H5ECBDC58",
+	"name": "时速无线",
 	"version": {
-		"name": "1.0.2",/*应用版本名称*/
+		"name": "1.0.1",
 		"code": "83"
 	},
-	"description": "",/*应用描述信息*/
+	"description": "时速聚财",
 	"icons": {
-		"72": "icon.png"
+		"72": "res/logos/icon72.png"
 	},
-	"launch_path": "src/views/login/login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
-		"name": "",/*开发者名称*/
-		"email": "",/*开发者邮箱地址*/
-		"url": "http://www.dcloud.io"
-	},
+    		"name": "",
+        "email": "",
+        "url": ""
+    },
+	"launch_path": "index.html",
 	"permissions": {
-		
-        
         "Cache": {
             "description": "管理应用缓存"
         },
-        
         "Console": {
             "description": "跟踪调试输出日志"
         },
@@ -37,48 +34,36 @@
         "File": {
             "description": "访问本地文件系统"
         },
-        
-        
-         "Invocation": {
+        "Invocation": {
             "description": "使用Native.js能力"
         },
-        
-        
-        
         "Storage": {
             "description": "管理应用本地数据"
         },
-        
-        
         "Runtime": {
             "description": "访问运行期环境"
         },
-        
-        
-        
-        
-        
         "Webview":{
-        	"description": "窗口管理"
+        		"description": "窗口管理"
         },
         "NativeUI":{
-        	"description": "原生UI控件"
+        		"description": "原生UI控件"
         },
         "Navigator":{
-        	"description": "浏览器信息"
+        		"description": "浏览器信息"
         },
         "NativeObj":{
-        	"description": "原生对象"
-        },"Gallery":{},"Geolocation":{},"XMLHttpRequest":{}
+        		"description": "原生对象"
+        },"Gallery":{},"Geolocation":{},"XMLHttpRequest":{},"Payment":{}
 	},
 	"plus": {
 		"splashscreen": {
 			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true
+			"waiting": true,"delay":"0"
 		},
 		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-		"distribute": {
+		"distribute": {"plugins":{"payment":{"alipay":{"description":"阿里支付","scheme":""}}},
 			"apple": {
 				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
 				"mobileprovision": "",/*iOS应用打包配置文件*/
@@ -88,54 +73,42 @@
 				"frameworks": []
 			},
 			"google": {
-				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"packagename": "com.ssjc",/*Android应用包名，如io.dcloud.HelloH5*/
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"]
+				"permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"]
 			},
 			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
 			"icons": {
-				"ios": {
+				"ios": {"ipad":{"retina":"unpackage/res/icons/144x144.png","normal":"unpackage/res/icons/72x72.png","retina7":"unpackage/res/icons/152x152.png","normal7":"unpackage/res/icons/76x76.png","settings-retina":"unpackage/res/icons/58x58.png","settings-normal":"unpackage/res/icons/29x29.png","spotlight-retina":"unpackage/res/icons/100x100.png","spotlight-normal":"unpackage/res/icons/50x50.png","spotlight-normal7":"unpackage/res/icons/40x40.png","spotlight-retina7":"unpackage/res/icons/80x80.png"},
 					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
 					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
 					"iphone": {
-						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
-						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
-						"retina7": "",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
-						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
-						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
-						"spotlight-retina7": "",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
-						"settings-retina": ""
-					},
-					"ipad": {
-						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
-						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
-						"normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
-						"retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
-						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
-						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
-						"spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
-						"spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
-						"settings-retina": ""
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png","retina8":"unpackage/res/icons/180x180.png","settings-retina8":"unpackage/res/icons/87x87.png"
 					}
 				},
 				"android": {
-					"mdpi": "", /*普通屏程序图标，分辨率：48x48*/
-					"ldpi": "", /*大屏程序图标，分辨率：48x48*/
-					"hdpi": "", /*高分屏程序图标，分辨率：72x72*/
-					"xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
-					"xxhdpi": ""
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png"
 				}
 			},
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": ""
+						"default": "res/splashes/iPhone320x480.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "res/splashes/iPhone640x960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "res/splashes/iPhone640x1136.png","retina47":"res/splashes/iPhone750x1334.png","retina55":"res/splashes/iPhone1242x2208.png"
 					},
 					"ipad": {
 						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
@@ -149,11 +122,11 @@
 					}
 				},
 				"android": {
-					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": ""
+					"mdpi": "res/splashes/Android240x282.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "res/splashes/Android320x442.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "res/splashes/Android480x762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "res/splashes/Android720x1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "res/splashes/Android1080x1882.png"
 				}
 			},"debug":true
 		}
@@ -173,7 +146,8 @@
 					"src/public/js/libs/mui.min.js",
 					"src/public/js/common/base.js",
 					"src/public/images/login/logo2.png",
-					"src/public/images/login/orange_bg.png"
+					"src/public/images/login/orange_bg.png",
+					"src/public/js/common/common.js"
 				],
 				"priority": 0,
 				"refer": [
@@ -184,8 +158,14 @@
 			},
 			"index.html": {
 				"priority": 0,
-				"resources": [],
-				"refer": []
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/common/mui.css"
+				],
+				"refer": [
+					"src/views/login/login.html",
+					"src/views/home/index.html"
+				]
 			},
 			"src/views/home/index.html": {
 				"resources": [
@@ -245,7 +225,19 @@
 					"src/public/images/earn_d.png",
 					"src/public/images/nav_me_d.png",
 					"src/public/images/hongbaoinfo_bg.png",
-					"src/public/js/libs/mui.min.js"
+					"src/public/js/libs/mui.min.js",
+					"src/public/images/hb_navlist_food.png",
+					"src/public/images/hb_navlist_avilable.png",
+					"src/public/images/hb_navlist_trip.png",
+					"src/public/images/hb_navlist_clothes.png",
+					"src/public/images/hb_navlist_hotel.png",
+					"src/public/images/hb_navlist_all.png",
+					"/src/public/images/home/hongbaoinfo_bg.png",
+					"/src/public/images/list-img2.png",
+					"/src/public/images/list-img1.png",
+					"src/public/images/home/hongbaoinfo_bg.png",
+					"src/public/js/common/base.js",
+					"src/public/js/common/common.js"
 				],
 				"refer": [
 					"src/views/home/detail-hongbao.html"
@@ -263,7 +255,8 @@
 					"src/public/images/bg_bar.png",
 					"src/public/js/common/base.js",
 					"src/public/style/css/fonts/iconfont.ttf",
-					"src/public/images/login/logo2.png"
+					"src/public/images/login/logo2.png",
+					"src/public/js/common/common.js"
 				],
 				"refer": [
 					"src/views/home/index.html",
@@ -300,10 +293,12 @@
 					"src/public/style/css/fonts/iconfont.ttf",
 					"src/public/images/login/logo2.png",
 					"src/public/js/libs/mui.min.js",
-					"src/public/images/login/orange_bg.png"
+					"src/public/images/login/orange_bg.png",
+					"src/public/js/common/base.js"
 				],
 				"refer": [
-					"src/views/login/modify-password.html"
+					"src/views/login/modify-password.html",
+					"src/views/login/login.html"
 				],
 				"priority": 0
 			},
@@ -332,13 +327,16 @@
 					"src/public/js/common/rem.js",
 					"src/public/images/bg_bar.png",
 					"src/public/images/item_btn_share_n.png",
-					"src/public/images/nav(white)_btn_back_n.png"
+					"src/public/images/nav(white)_btn_back_n.png",
+					"src/public/images/wifi/btn_bankcard.png",
+					"src/public/images/wifi/wifi-plan.png"
 				],
 				"refer": [
 					"src/views/wifi/main.html",
 					"src/views/home/index.html",
 					"src/views/earn/main.html",
-					"src/views/me/main.html"
+					"src/views/me/main.html",
+					"src/views/wifi/order.html"
 				],
 				"priority": 0
 			},
@@ -369,7 +367,13 @@
 					"src/views/home/index.html",
 					"src/views/wifi/main.html",
 					"src/views/earn/main.html",
-					"src/views/me/main.html"
+					"src/views/me/main.html",
+					"src/views/login/login.html",
+					"src/views/me/help.html",
+					"src/views/me/getTuDi.html",
+					"src/views/me/tixian.html",
+					"src/views/wifi/myOrder.html",
+					"src/views/me/setting-main.html"
 				],
 				"priority": 0
 			},
@@ -399,9 +403,15 @@
 					"src/public/style/css/earn/style.css",
 					"src/public/images/bg_bar.png",
 					"src/public/images/earn/arrow-right.png",
-					"src/public/images/earn/pocket.png"
+					"src/public/images/earn/pocket.png",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/js/common/common.js"
 				],
-				"priority": 4
+				"priority": 4,
+				"refer": [
+					"src/views/earn/ad-shoutudi.html"
+				]
 			},
 			"src/views/earn/wifiad.html": {
 				"href": "src/views/earn/wifiad.html",
@@ -414,7 +424,8 @@
 					"src/public/images/earn/arrow-right.png",
 					"src/public/images/earn/pocket.png"
 				],
-				"priority": 5
+				"priority": 5,
+				"refer": []
 			},
 			"src/views/earn/hongbao.html": {
 				"href": "src/views/earn/hongbao.html",
@@ -424,9 +435,13 @@
 					"src/public/style/css/fonts/mui.ttf",
 					"src/public/style/css/earn/style.css",
 					"src/public/images/bg_bar.png",
-					"src/public/images/earn/pocket.png"
+					"src/public/images/earn/pocket.png",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/js/common/common.js"
 				],
-				"priority": 6
+				"priority": 6,
+				"refer": []
 			},
 			"src/views/earn/fenxiao.html": {
 				"href": "src/views/earn/fenxiao.html",
@@ -437,9 +452,11 @@
 					"src/public/style/css/earn/style.css",
 					"src/public/images/bg_bar.png",
 					"src/public/images/earn/arrow-right.png",
-					"src/public/images/earn/pocket.png"
+					"src/public/images/earn/pocket.png",
+					"src/public/js/common/rem.js"
 				],
-				"priority": 7
+				"priority": 7,
+				"refer": []
 			},
 			"src/views/earn/main.html": {
 				"href": "src/views/earn/main.html",
@@ -456,13 +473,29 @@
 					"src/public/images/earn/earnintro1.png",
 					"src/public/images/earn/earnintro2.png",
 					"src/public/images/earn/earnintro3.png",
-					"src/public/images/earn/earnintro4.png"
+					"src/public/images/earn/earnintro4.png",
+					"src/public/js/common/rem.js",
+					"src/public/images/second_s.png",
+					"src/public/images/nav_me_d.png",
+					"src/public/images/earn_s.png",
+					"src/public/images/hongbao_d.png",
+					"src/public/images/second_d.png",
+					"src/public/images/nav_me_s.png",
+					"src/public/images/earn_d.png",
+					"src/public/images/hongbao_s.png"
 				],
 				"refer": [
 					"src/views/earn/tudi.html",
 					"src/views/earn/wifiad.html",
 					"src/views/earn/hongbao.html",
-					"src/views/earn/fenxiao.html"
+					"src/views/earn/fenxiao.html",
+					"src/views/wifi/main.html",
+					"src/views/me/main.html",
+					"src/views/earn/ad-kanguanggao.html",
+					"src/views/earn/ad-shoutudi.html",
+					"src/views/earn/ad-fenxiao.html",
+					"src/views/earn/ad-fenhong.html",
+					"src/views/home/index.html"
 				],
 				"priority": 4
 			},
@@ -488,7 +521,8 @@
 					"src/public/images/order-icon.png",
 					"src/public/js/libs/mui.min.js"
 				],
-				"priority": 5
+				"priority": 5,
+				"refer": []
 			},
 			"src/views/me/info-modify.html": {
 				"href": "src/views/me/info-modify.html",
@@ -511,9 +545,12 @@
 					"src/public/images/nav_me_d.png",
 					"src/public/images/order-icon.png",
 					"src/public/js/libs/mui.min.js",
-					"src/public/images/avatar.jpg"
+					"src/public/images/avatar.jpg",
+					"src/public/style/css/common/mui.picker.min.css",
+					"src/public/js/common/mui.picker.min.js"
 				],
-				"priority": 6
+				"priority": 6,
+				"refer": []
 			},
 			"src/views/me/info.html": {
 				"href": "src/views/me/info.html",
@@ -556,6 +593,273 @@
 					"src/public/style/css/common/mui.min.css",
 					"src/public/js/common/common.js",
 					"src/public/js/home/city-list.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/wifi/order.html": {
+				"resources": [
+					"src/public/images/wifi/list_arrow_more.png",
+					"src/public/images/wifi/add_seal.png",
+					"src/public/images/wifi/icon-locate.png",
+					"src/public/images/list-img0.png",
+					"src/public/js/libs/mui.min.js",
+					"src/public/js/wifi/wifi-order.js",
+					"src/public/js/common/rem.js",
+					"src/public/style/css/wifi/wifi-main.css",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/images/nav(white)_btn_back_n.png",
+					"src/public/js/common/common.js",
+					"src/public/images/earn/arrow-right.png",
+					"src/public/style/css/common/component.css"
+				],
+				"refer": [
+					"src/views/wifi/pay.html",
+					"src/views/me/info-shouhuo-modify.html"
+				],
+				"priority": 0
+			},
+			"src/views/wifi/pay.html": {
+				"resources": [
+					"src/public/images/wifi/Rectangle.png",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/wifi/wifi-pay.js",
+					"src/public/images/list-img0.png",
+					"src/public/js/libs/mui.min.js",
+					"src/public/js/common/rem.js",
+					"src/public/style/css/wifi/wifi-main.css",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/images/nav(white)_btn_back_n.png",
+					"src/public/js/common/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/help.html": {
+				"resources": [
+					"src/public/images/me/help info.png",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/me/main.css",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/style/css/common/component.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/getTuDi.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/images/me/login_button_shareQR_d.png",
+					"src/public/images/me/login_button_sharecopy_d.png",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/me/main.js",
+					"src/public/js/common/rem.js",
+					"src/public/images/me/login_button_wechat_moment_d.png",
+					"src/public/images/me/login_button_weibo_d.png",
+					"src/public/images/me//login_button_wechat_d.png",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/style/css/me/style.css",
+					"src/public/js/common/common.js",
+					"src/public/images/me/login_button_QQ_d.png",
+					"src/public/style/css/common/component.css",
+					"src/public/images/nav(white)_btn_back_n.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/tixian.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/images/me/alipay.png",
+					"src/public/images/me/btn_bankcardbuy_n.png",
+					"src/public/images/me/wechat.png",
+					"src/public/js/me/main.js",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/images/me/right.png",
+					"src/public/style/css/me/style.css",
+					"src/public/js/common/common.js",
+					"src/public/style/css/common/component.css",
+					"src/public/images/nav(white)_btn_back_n.png",
+					"src/public/style/css/fonts/mui.ttf"
+				],
+				"refer": [
+					"src/views/me/tianxian-way.html",
+					"src/views/me/chongzhi.html"
+				],
+				"priority": 0
+			},
+			"src/views/earn/ad-kanguanggao.html": {
+				"resources": [
+					"src/public/images/earn/adertisement 1.png",
+					"src/public/style/css/earn/style.css",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/rem.js"
+				],
+				"refer": [
+					"src/views/home/index.html"
+				],
+				"priority": 0
+			},
+			"src/views/earn/ad-shoutudi.html": {
+				"resources": [
+					"src/public/images/earn/adertisement 2.png",
+					"src/public/style/css/earn/style.css",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/rem.js"
+				],
+				"refer": [
+					"src/views/home/index.html"
+				],
+				"priority": 0
+			},
+			"src/views/earn/ad-fenxiao.html": {
+				"resources": [
+					"src/public/images/earn/adertisement 4.png",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/earn/style.css",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/rem.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/earn/ad-fenhong.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/images/earn/adertisement 5.png",
+					"src/public/js/common/rem.js",
+					"src/public/style/css/earn/style.css",
+					"src/public/style/css/common/mui.min.css"
+				],
+				"refer": [
+					"src/views/home/index.html"
+				],
+				"priority": 0
+			},
+			"src/views/wifi/myOrder.html": {
+				"resources": [
+					"src/public/style/css/style.css",
+					"src/public/style/css/common/component.css",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/common.js",
+					"src/public/images/bg_bar.png"
+				],
+				"refer": [
+					"src/views/wifi/pay.html"
+				],
+				"priority": 0
+			},
+			"src/views/me/setting-main.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/me/main.css",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/common.js",
+					"src/public/images/bg_bar.png"
+				],
+				"refer": [
+					"src/views/me/setting-pass.html",
+					"src/views/me/setting-feedback.html"
+				],
+				"priority": 0
+			},
+			"src/views/me/setting-feedback.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/me/main.css",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/common.js",
+					"src/public/images/bg_bar.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/setting-pass.html": {
+				"resources": [],
+				"refer": [
+					"src/views/me/setting-pass-modify.html"
+				],
+				"priority": 0
+			},
+			"src/views/me/cash-zhifubao.html": {
+				"resources": [
+					"src/public/images/bg_bar.png",
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/component.css",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/style/css/me/style.css",
+					"src/public/js/common/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/tianxian-way.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/images/me/alipay.png",
+					"src/public/images/me/btn_bankcardbuy_n.png",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/component.css",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/style/css/me/style.css",
+					"src/public/js/common/common.js"
+				],
+				"refer": [
+					"src/views/me/cash-zhifubao.html",
+					"src/views/me/cash-bank.html"
+				],
+				"priority": 0
+			},
+			"src/views/me/chongzhi.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/me/main.css",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/component.css",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/js/common/common.js",
+					"src/public/images/bg_bar.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"src/views/me/cash-bank.html": {
+				"resources": [
+					"src/public/js/libs/mui.min.js",
+					"src/public/style/css/fonts/mui.ttf",
+					"src/public/js/me/main.js",
+					"src/public/js/common/rem.js",
+					"src/public/js/common/base.js",
+					"src/public/style/css/common/component.css",
+					"src/public/style/css/common/mui.min.css",
+					"src/public/style/css/me/style.css",
+					"src/public/js/common/common.js",
+					"src/public/images/bg_bar.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -2696,7 +3000,6 @@
 				"node_modules/lodash/_cacheHas.js",
 				"node_modules/weinre/web/client/Images/resourceDocumentIcon.png",
 				"node_modules/easy-extender/node_modules/lodash/chain/wrapperConcat.js",
-				"src/public/style/css/common/mui.css",
 				"node_modules/range-parser/README.md",
 				"node_modules/regex-cache/package.json",
 				"node_modules/lodash/toString.js",
@@ -3130,7 +3433,6 @@
 				"node_modules/easy-extender/node_modules/lodash/internal/assignDefaults.js",
 				"node_modules/repeat-element/LICENSE",
 				"node_modules/yargs/node_modules/window-size/cli.js",
-				"src/public/style/css/common/component.css",
 				"node_modules/browser-sync-ui/lib/utils.js",
 				"node_modules/path-exists/package.json",
 				"node_modules/less/test/less-bom/errors/imports/import-subfolder1.less",
@@ -5040,7 +5342,6 @@
 				"node_modules/easy-extender/node_modules/lodash/internal/baseCopy.js",
 				"node_modules/esmangle-evaluator/package.json",
 				"node_modules/less/test/less-bom/no-js-errors/no-js-errors.less",
-				"src/views/wifi/myOrder.html",
 				"node_modules/map-obj/readme.md",
 				"node_modules/lodash/fp/take.js",
 				"node_modules/orchestrator/README.md",
@@ -16233,6 +16534,21 @@
 	  "node_modules/yargs-parser/node_modules/camelcase/index.js",
 	  "node_modules/yargs-parser/node_modules/camelcase/license",
 	  "node_modules/yargs-parser/node_modules/camelcase/package.json",
-	  "node_modules/yargs-parser/node_modules/camelcase/readme.md"
+	  "node_modules/yargs-parser/node_modules/camelcase/readme.md",
+	  "src/public/style/less/common/nav.less",
+	  "src/public/style/less/earn/style.less",
+	  "src/public/style/less/home/city-list.less",
+	  "src/public/style/less/me/main.less",
+	  "src/public/style/less/wifi/wifi-main.less",
+	  "src/public/style/less/style.less",
+	  "src/public/images/img/Thumbs.db",
+	  "src/public/images/img/minus-off.png",
+	  "src/public/images/img/minus.png",
+	  "src/public/images/img/order-img.png",
+	  "src/public/images/img/plus-off.png",
+	  "src/public/images/img/plus.png",
+	  "src/public/images/logo.png",
+	  "src/public/images/spritesheet.png",
+	  "src/public/style/css/common/normalize.css"
 	]
 }

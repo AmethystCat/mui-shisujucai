@@ -1,4 +1,4 @@
-
+@import "./common/variable";
 @charset "utf-8";
 html{font-size: 62.5%}
 .index-list-titbody,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,body{display:block;padding:0px; margin:0px; border:none;}
@@ -171,10 +171,11 @@ a:active,a:visited{color: #333;}
 
 
 /*intro.html*/
-.intro .intro-head{position: relative;color: #F7F5F5;font-size: 1.2rem}
-.intro .intro-head-bg{width: 100%;}
-.intro-head-l{position: absolute;left: 0;bottom:.8rem;margin-left:1rem; } 
-.intro-head-r{position: absolute;right: 0;bottom:.8rem;text-align: right;padding-right: 1.4rem;} 
+.intro .intro-head{position: relative;color: #F7F5F5;font-size: 1.2rem;}
+.intro .intro-head-bg{width: 100%;display: block;}
+.intro .hongbaoinfo-bg {position: absolute;bottom: 0;left: 0;width: 100%;z-index: 2;}
+.intro-head-l{position: absolute;left: 0;bottom:.8rem;margin-left:1rem; z-index: 3;} 
+.intro-head-r{position: absolute;right: 0;bottom:.4rem;text-align: right;padding-right: 1.4rem; z-index: 3;} 
 .intro-con{margin:0 2rem;}
 .intro-con-tit{padding:1rem 0; ;font-size: 1.3rem;color: #4E4E4E;}
 .intro-con p{font-size: 1.2rem;color: #989898;text-indent: 2rem} 
@@ -188,8 +189,8 @@ a:active,a:visited{color: #333;}
 .intro-foot p{margin:0 2rem;font-size: 1rem;color: #626262;}
 .test-tit{padding:(19/16*1rem) 0 0.8rem 0;display: block;}
 .test-answer{padding: 0 2rem 20/16*1rem 2rem; font-size: 1.4rem;text-align: center;} 
-.test-answer a{  display: block;margin:0 0.6rem; height: 2.4rem;line-height: 2.4rem; border:1px solid #CBCBCB;border-radius: 6px;font-weight: bold;    color: #535353;}
-.test-answer .answer-on{color: #FAA519;border:1px solid #FAA519;}
+.test-answer a{  display: block;margin:0 0.6rem; height: 2.4rem;line-height: 2.4rem; border:1px solid #CBCBCB;border-radius: 6px;font-weight: bold;color: #535353;}
+.test-answer .on{color: #FAA519;border:1px solid #FAA519;}
 .intro-foot input{ margin:0 2rem;color: #fff;height: 4rem;line-height: 4rem; background: #FAA519;font-size: 1.3rem;text-align: center;border-radius: 4px;margin-top:1.6rem;margin-bottom: 1.6rem}
 .intro-tips{border-top:1px solid #DCDCDC;padding:1rem;margin:0 3.5rem; line-height:2rem;color: #A1A1A1;font-size: 1rem;}
 .intro-link > a > div{margin:0 auto; width: 43/16*1rem;height: 43/16*1rem;border-radius: 50%;}
@@ -199,11 +200,11 @@ a:active,a:visited{color: #333;}
 /*myOrder.html*/
 .pro-img{width: 77px;height: 77px;;margin-right: 1rem;}
 .order-list .pro-img img{width: 77px;height: 77px;}
-.pro-con-property{line-height: 2.4rem}
+.pro-con-property{padding-bottom: 1rem;}
 .pro-quantity{position: absolute;right: 1.1rem;top:22px;}
 .pro-quantity span{width: 1.5rem;height: 1.5rem;}
 .pro-num{font-size: 1.4rem}
-.pro-con-price{margin-top: 1rem;}
+//.pro-con-price{margin-top: 1rem;}
 .pro-con-price span:first-child{margin-right: .5rem}
 .order-foot{border-bottom: 1px solid #F5F5F5;}
 .order-foot-all{padding:.5rem 1.1rem;overflow: hidden;}
@@ -229,4 +230,142 @@ a:active,a:visited{color: #333;}
     line-height: 1rem;
     background: #FAA519;
     color: #fff;
+}
+
+.ss-mui-icon-left-nav {
+//  background: url(../../../images/nav(white)_btn_back_n.png) no-repeat center;
+    color: @nav-arrow-c;
+    padding-top: 5px;
+    img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    & + .ss-title {
+        padding-top: 1px;
+        color: @nav-arrow-c;
+    }
+}
+
+.ss-bar-nav {
+    .ss-btn-shop {
+        background: url('../../images/home/nav(white)_shop_n.png') no-repeat center;
+    }
+    .ss-btn-share {
+        background: url('../../images/home/nav(white)_share_n.png') no-repeat center;
+    }
+    .ss-btn-shop, .ss-btn-share {
+        text-indent: -999px;
+        margin-top: 5px;
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+    }
+}
+.ss-content.popblur {
+    -webkit-filter: blur(4px);
+}
+
+.pop-hongbao-c {
+    display: none;
+    position: fixed;
+    width: 210/@f*@u;
+    height: 252/@f*@u;
+    top: 50%;
+    left: 50%;
+    margin-left: -105/@f*@u;
+    margin-top: -126/@f*@u;
+    background: url('../../images/home/hb_hongbao get_bg.png') no-repeat center;
+    background-size: contain;
+    z-index: 2;
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    .hongbao-c {
+        position: relative;
+        z-index: 2;
+        span {
+            display: block;
+            text-align: center;
+            &:first-child {
+                font-size: 36px;
+                color: #F9A419;
+                padding-top: 130/@f*@u;
+                padding-bottom: 26/@f*@u;
+                &+span {
+                    font-size: 22px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    color: #E87E19;
+                }
+            }
+        }
+    }
+    &__detail2 {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 346/@f*@u;
+        height: 398/@f*@u;
+        margin-left: -173/@f*@u;
+        margin-top: -199/@f*@u;
+        background: url('../../images/home/fullscreen_hongbao_details&answer.png') no-repeat center;
+        background-size: 100% 100%;
+        
+        h3 {
+            padding-top: 16px;
+            text-align: center;
+            font-size: 1rem;
+            color: @pc-l;
+            letter-spacing: 1px;
+        }
+        .mask {
+            &:extend(.pop-hongbao-c .mask);
+        }
+        .intro-foot {
+            position: relative;
+            z-index: 2;
+            margin-top: (100-30)/@f*1rem-1rem;
+            >div {
+                font-size: 15px;
+                color: #fff;
+                .test-tit {
+                    padding-left: 2rem;
+                    padding-bottom: 0.3rem;
+                }
+            }
+            ul {
+                margin-bottom: .5rem;
+            }
+            li {
+                font-size: 15px;  
+                margin-bottom: 3px;  
+                color: #fff;
+                letter-spacing: 1px;
+            }
+            .test-answer {
+                padding-bottom: 1rem;
+                a {
+                    height: 2rem;
+                    line-height: 2rem;
+                    color: #fff;
+                    border-width: 2px;
+                }
+            }
+            .intro-tips {
+                border-top: 0;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+    }
+} 
+#icon_hongbao {
+    position: absolute;
 }

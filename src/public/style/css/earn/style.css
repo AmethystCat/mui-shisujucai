@@ -1,5 +1,124 @@
 @charset "utf-8";
 html {
+  max-width: 580px;
+  overflow-x: hidden;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.ss-bar-nav {
+  box-shadow: none;
+  border-bottom: 1px solid #FEC75C;
+  background: url('../../../images/bg_bar.png') repeat-x center;
+}
+.ss-bar-nav .ss-icon-left-nav {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.ss-bar-nav .ss-title {
+  color: #ffedcc;
+  font-size: 1.2rem;
+}
+.ss-bar-nav .mui-btn-link {
+  color: #ffedcc;
+}
+.ss-bar-tab.mui-bar-tab .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FAA519;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-hongbao {
+  background: url("../../../images/hongbao_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-wifi {
+  background: url("../../../images/second_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-earn {
+  background: url("../../../images/earn_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .ss-icon-me {
+  background: url("../../../images/nav_me_s.png") no-repeat center;
+}
+.ss-bar-tab.mui-bar-tab .mui-tab-item.mui-active .mui-icon {
+  background-size: contain;
+}
+.ss-bar-tab .ss-icon-hongbao {
+  background: url("../../../images/hongbao_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-wifi {
+  background: url("../../../images/second_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-earn {
+  background: url("../../../images/earn_d.png") no-repeat center;
+}
+.ss-bar-tab .ss-icon-me {
+  background: url("../../../images/nav_me_d.png") no-repeat center;
+}
+.tc {
+  text-align: center;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-hongbao {
+  width: 22px;
+}
+.mui-bar-tab .mui-tab-item .ss-icon-earn {
+  width: 28px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+  top: 5px;
+}
+.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label {
+  height: 21px;
+  padding-top: 1px;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: 667px;
+  background-image: -moz-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -ms-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -o-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffbe36), to(#fd9426));
+  background-image: -webkit-linear-gradient(top, #ffbe36, #fd9426);
+  background-image: linear-gradient(top, #ffbe36, #fd9426);
+}
+.bg img {
+  display: block;
+  width: 100%;
+}
+.bg .logo-c {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 200px;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -100px;
+  background: url(../../../public/images/login/logo2.png) no-repeat center;
+  background-size: contain;
+}
+.ss-bar-nav--white {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #adadad;
+  box-shadow: none;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav {
+  color: #FAA519;
+  padding-top: 5px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav img {
+  width: 35px;
+  height: 35px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav + .ss-title {
+  padding-top: 1px;
+  color: #FAA519;
+}
+html {
   font-size: 62.5%;
 }
 .index-list-titbody,
@@ -231,31 +350,92 @@ a:visited {
   font-size: 1.2rem;
 }
 .pocket-block span:nth-child(2) {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .pocket-block span:nth-child(3) {
-  font-size: 1.2rem;
+  font-size: 0.875rem;
 }
 .pocket-block .txt_black {
-  font-size: 1.6rem;
-  line-height: 3rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pocket-block .txt_black:nth-child(2) {
+  padding-top: 0.375rem;
+}
+.pocket-block .txt_black:nth-child(3) {
+  padding-top: 1.125rem;
+}
+.pocket-block.pocket-block-hongbao {
+  margin: 1.75rem 0 1.625rem;
+}
+.pocket-block.pocket-block-tudi {
+  margin-top: .5rem;
+}
+.pocket-block.pocket-block-tudi .txt_black:nth-child(2) {
+  line-height: .8;
+  padding-top: .2rem;
+  padding-bottom: 0;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pocket-block.pocket-block-tudi .txt_black:nth-child(3) {
+  padding-top: 0;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pocket-block.pocket-block-fenxiao .txt_black:nth-child(2) {
+  padding: 0;
+  font-size: 1rem;
+}
+.pocket-block.pocket-block-fenxiao .txt_black:nth-child(3) {
+  padding-top: 0;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pocket-block.pocket-block-fenxiao .arrow-right {
+  width: .5rem;
+  height: 0.8125rem;
+  top: 38%;
+}
+.pocket-block.pocket-block-fenxiao img {
+  height: auto;
+}
+.pocket-block.pocket-block-wifiad {
+  margin-top: .5rem;
+}
+.pocket-block.pocket-block-wifiad .txt_black:nth-child(2) {
+  line-height: .8;
+  padding-top: .2rem;
+  padding-bottom: 0;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pocket-block.pocket-block-wifiad .txt_black:nth-child(3) {
+  padding-top: 0;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.8);
 }
 .pocket-btn {
   font-size: 1.8rem;
   clear: both;
-  height: 4.7rem;
-  line-height: 4.7rem;
+  height: 3rem;
+  line-height: 3rem;
   color: #fff;
+  font-size: 1.125rem;
   background: #FAA519;
 }
 .pocket-btn a {
   display: block;
   color: #fff;
 }
+.pocket-block2 {
+  overflow: auto;
+}
 .pocket-block2 .pocket-list {
   float: left;
   width: 33.33333333%;
-  margin: 1.7rem 0 0;
+  margin: 1.25rem 0 0;
 }
 .pocket-block2 .pocket-list div:nth-child(2) {
   -webkit-text-overflow: ellipsis;
@@ -264,20 +444,37 @@ a:visited {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.3rem;
-  line-height: 1.5rem;
+  line-height: 1;
   color: #F14444;
+  font-size: 1.125rem;
 }
 .pocket-block2 .pocket-list div:nth-child(3) {
   font-size: 1.2rem;
   color: #F14444;
+  font-size: 0.875rem;
 }
 .pocket-block2 .pocket-list img {
-  width: 4.5rem;
-  height: 5.6rem;
+  width: 2.9375rem;
+  height: 3.375rem;
 }
 .my-pocket2 .pocket-block1 {
   margin: .6rem 0;
   border-bottom: 1px solid #EAEAEA;
+}
+.my-pocket2 .pocket-block1.pocket-block-tudi {
+  margin-top: 0;
+}
+.my-pocket2 .pocket-block1.pocket-block-tudi .pocket-block1-list {
+  padding-top: .8rem;
+  padding-bottom: .4rem;
+}
+.my-pocket2 .pocket-block1.pocket-block-tudi .pocket-block1-list .arrow-right {
+  width: .5rem;
+  height: 0.8125rem;
+  top: 38%;
+}
+.my-pocket2 .pocket-block1.pocket-block-tudi .pocket-block1-list img {
+  height: auto;
 }
 .pocket-block1-list {
   position: relative;
@@ -323,42 +520,48 @@ a:visited {
   float: left;
 }
 .my-profit-txt1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .my-profit-txt2 {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  padding-top: 3px;
 }
 .my-profit-txt3 {
-  font-size: 1.2rem;
+  font-size: 0.875rem;
 }
 .my-profit1 {
-  margin: 1.4rem 1.2rem;
+  margin: 0.75rem 0.9375rem 0.375rem 0.9375rem;
 }
 .my-profit1 img {
-  margin-right: 2rem;
+  margin-right: 1.125rem;
+  width: 2.9375rem;
+  height: 3.375rem;
 }
 .my-profit1 .my-profit-div1 > div:first-child {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  margin-left: -4px;
 }
 .my-profit1 .my-profit-div1 > div:nth-child(2) {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  padding-top: 3px;
 }
 .my-profit1 .my-profit-div1 > div:nth-child(3) {
-  font-size: 1.2rem;
+  font-size: 0.875rem;
 }
 .my-profit1 a {
   display: block;
-  width: 11rem;
-  height: 3.9rem;
+  width: 7.5rem;
+  height: 2.5rem;
   text-align: center;
   background: #FAA519;
   color: #fff;
   font-size: 1.6rem;
-  line-height: 3.9rem;
+  line-height: 2.35;
   border-radius: 6px;
   margin-top: .4rem;
+  font-size: 1.125rem;
 }
 .my-profit2 {
   display: -moz-box;
@@ -371,7 +574,7 @@ a:visited {
 .my-profit2 .my-profit2-list {
   text-align: center;
   color: #FF2E0A;
-  height: 7.2rem;
+  height: 5rem;
   width: 50%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: column;
@@ -397,14 +600,21 @@ a:visited {
   justify-content: center;
 }
 .my-profit2 .my-profit2-list div:nth-child(1) {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .my-profit2 .my-profit2-list div:nth-child(2) {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  padding-top: 3px;
 }
 .my-profit2 .my-profit2-list div:nth-child(3) {
-  font-size: 1.2rem;
+  font-size: 0.875rem;
+}
+.my-profit2 .my-profit2-list.ad {
+  height: 4.5rem;
+}
+.my-profit2 .my-profit2-list > div:first-child {
+  padding-top: 5px;
 }
 .my-profit2 .my-profit2-list:nth-child(even) {
   border-top: 1px solid #CBCBCB;
@@ -420,4 +630,29 @@ a:visited {
 .my-profit2 img {
   width: 100%;
   height: 100%;
+}
+.ss-content {
+  position: relative;
+}
+.ss-content .ss-btn-link {
+  position: absolute;
+  bottom: .5rem;
+  left: 50%;
+  margin-left: -40%;
+  background: rgba(255, 255, 255, 0.2);
+  width: 80%;
+  height: 2.8125rem;
+  padding: 0;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.ss-content .ss-btn-link:enabled:active {
+  border: 1px solid #838383;
+  background: #838383;
+}
+.ss-content .ss-btn-getAll:enabled:active {
+  background: #ea9100;
+}
+.ss-content .btn-allGet:enabled:active {
+  background: #ea9100;
 }

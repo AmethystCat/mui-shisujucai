@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>银行卡提现</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/style.css">
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    	.mui-switch.mui-active {
+    		border-color: #FE921E;
+    		background: #FE921E;
+    	}
+    	.mui-input-group .mui-input-row:after {
+    		left: 0;
+    	}
+    	.mui-table-view-cell:after {
+    		left: 0;
+    	}
+    	.mui-input-group:after {
+    		height: 0;
+    	}
+    	.hr {
+    		padding: 1rem;
+    		border-bottom: 1px solid #c8c7cc;
+    		background: #F2F2F2;
+    	}
+    </style>
+</head>
+<body> 
+     <header class="mui-bar mui-bar-nav ss-bar-nav">
+    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+    	<h1 class="mui-title ss-title">银行卡提现 </h1>
+	</header> 
+     <div class="mui-content cash-by-bank-copy"> 
+        <div class="vip1"> 
+            <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>余额</label>
+                    <span class="red-txt" id="yu-e">￥105</span>
+                </div>
+                <div class="mui-input-row">
+                    <label>可提现</label>
+                    <span class="red-txt" id="ke-tixian">￥105</span>
+                </div>
+                <div class="mui-input-row">
+                    <label>提现金额</label>
+                    <input type="text" id="tixian-jine" placeholder="请输入要提现的金额">
+                </div>
+                <div class="mui-input-row">
+                    <label>联系方式</label>
+                    <input type="text" id="contact" class="mui-input-clear" placeholder="请输入您的联系方式"></span>
+                </div>
+                <div class="mui-input-row">
+                    <label>备注</label>
+                    <input type="text" id="remark" placeholder="若有特别说明请备注">
+                </div>
+                <div class="hr">
+                    <label>银行卡信息</label>
+                    <!--<input type="text" class="mui-input-clear" placeholder="" data-input-clear="5"></span>-->
+                </div>
+                <div class="mui-input-row">
+                    <label>开户人</label>
+                    <input type="text" id="kaihu_name" placeholder="请输入开户人姓名">
+                </div>
+                <div class="mui-input-row">
+                    <label>开户银行</label>
+                    <input type="text" id="bank_name" class="mui-input-clear" placeholder="请选择开户行" data-input-clear="5"></span>
+                </div>
+                <div class="mui-input-row">
+                    <label>开户地址</label>
+                    <input type="text" id="bank_address" placeholder="请输入开户行所属分行">
+                </div>
+                <div class="mui-input-row">
+                    <label>银行卡号</label>
+                    <input type="text" class="mui-input-clear" id="num" placeholder="请输入银行卡号码" data-input-clear="5"></span>
+                </div>  
+                <div class="mui-table-view-cell">
+                    <span>保存银行卡信息</span>
+                    <div class="mui-switch mui-switch-mini mui-active mui-switch-blue">
+                      <div class="mui-switch-handle"></div>
+                    </div>
+                </div>
+                <div class="cash-by-bank-copy2 tc" style="color: #A6A6A6;">
+                     提现手续费为1%单笔最高50元<br/>
+                     充值的金额不能提现 提交后2个工作日到账                     
+                </div>
+                <button type="button" class="mui-btn mui-btn-warning mui-btn-block" style="margin-bottom: .5rem; height: 2.85rem; line-height: .8;border-color: #FE921E;background: #FE921E;">确定</button>
+            </form>
+        </div> 
+     </div>
+
+</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../public/js/me/main.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+	mui.init();
+	(function($){
+		mui.ready(function () {
+		 	mui.plusReady(function () {
+				var userinfo = JSON.parse(plus.storage.getItem('userinfo'));
+				console.log(userinfo);
+				$("#yu-e")[0].innerHTML = '￥' + userinfo.account_balance;
+				$("#ke-tixian")[0].innerHTML = '￥' + userinfo.account_balance;
+				
+				$("body").on('click', '#btn-sub', function () {
+					
+					$.ajax(H.common.host + '/api/profit/withdraw_cash/apply',{
+						data:{
+							amount: $('#tixian-jine')[0].value,
+							type: 1,
+							contact: $('#contact')[0].value,
+							remark: $('#remark')[0].value,
+							name : $('#kaihu_name')[0].value,
+							bank : $('#bank_name')[0].value,
+							address: $('#bank_address')[0].value,
+							card_no: $('#num')[0].value
+						},
+						dataType:'json',//服务器返回json格式数据
+						type:'post',//HTTP请求类型
+						timeout:10000,//超时时间设置为10秒；
+						success:function(res){
+							console.log(JSON.stringify(res));
+							if(res.code === 0){
+								$.toast(res.message||'操作成功');
+								$.openWindow('/src/views/me/main.html','me-main',{})
+							} else {
+								$.alert(res.message);
+							}
+						},
+						error:function(xhr,type,errorThrown){
+							$.alert(xhr.responseText);
+						}
+					});
+				});
+			});  	
+	  	});
+		
+	})(mui);
+</script>
+</html>
+ 

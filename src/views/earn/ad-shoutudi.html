@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <title>徒弟分红</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" href="../../public/style/css/earn/style.css">
+    <style type="text/css">
+    	.ss-content {
+    		overflow: hidden;
+    	}
+    	img {
+    		display: block;
+    	}
+    </style>
+</head>
+<body>
+	<div class="mui-content ss-content">
+		<img src="../../public/images/earn/adertisement 2.png"/>
+		<button id="btn" type="button" class="mui-btn ss-btn-link mui-btn-block mui-btn-blue mui-btn-outlined">立即收徒</button>
+	</div>
+</body>
+<script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	mui.init({
+		styles: {
+			top: 0,
+			bottom: 0
+		}
+	});
+	mui.ready(function () {
+//		mui(".ss-content")[0].style.height = window.innerHeight + 'px';
+		mui('.mui-content').on('click', '#btn', function () {
+			mui.openWindow('/src/views/home/index.html','home-index',{});
+		});
+	});
+</script>
+</html>

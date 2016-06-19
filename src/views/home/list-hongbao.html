@@ -9,7 +9,36 @@
 	<script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<div class="mui-content ss-content--list-hongbao" id="ss-list-hongbao">
+<div class="mui-content ss-content ss-content--list-hongbao" >
+	<div class="sub-bar-nav mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active ss-tab-item" data-id="">
+			<span class="mui-icon ss-icon-navAll"></span>
+			<span class="mui-tab-label">全部</span>
+		</a>
+		<!--<a class="mui-tab-item">
+			<span class="mui-icon ss-icon-navAvilable"></span>
+			<span class="mui-tab-label">可抢</span>
+		</a>-->
+		<a class="mui-tab-item ss-tab-item" data-id="0">
+			<span class="mui-icon ss-icon-food"></span>
+			<span class="mui-tab-label">美食</span>
+		</a>
+		<a class="mui-tab-item ss-tab-item" data-id="1">
+			<span class="mui-icon ss-icon-clothes"></span>
+			<span class="mui-tab-label">时尚</span>
+		</a>
+		<a class="mui-tab-item ss-tab-item" data-id="2">
+			<span class="mui-icon mui-icon-hotel"></span>
+			<span class="mui-tab-label">酒店</span>
+		</a>
+		<a class="mui-tab-item ss-tab-item" data-id="3">
+			<span class="mui-icon mui-icon-trip"></span>
+			<span class="mui-tab-label">旅行</span>
+		</a>
+	</div>
+	<div id="ss-list-hongbao" class="ss-list-hongbao-w">
+		<p style="text-align: center;padding: 1rem 0;">加载中...</p>
+	</div>
     <!--<a href="#" class="list-item-hongbao">
         <img src="../../public/images/list-img0.png" alt="bg">
         <div class="hongbao-info text1">
@@ -24,5 +53,7 @@
 
 </div>
 </body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../public/js/home/list-hongbao.js" type="text/javascript" charset="utf-8"></script>
 </html>

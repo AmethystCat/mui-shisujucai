@@ -442,7 +442,42 @@
 
         }
     };
-
+    
+	H.timeCalc = function (el, time) {
+			var originVal = el.innerHTML || el.innerText || el.textContent;
+			console.log(originVal);
+			
+			if(!H.isNumber(time)) return false;
+			
+			function recover() {
+				clearInterval(timer);
+				el.innerHTML = originVal;
+				el.disabled = false;
+				H.removeClass(el, 'sending');
+			}
+			function showTime() {
+				el.innerHTML = '发送验证码' + time + 's';
+			}
+			showTime();
+			H.addClass(el, 'sending');
+			var timer = setInterval(function () {
+				time--;
+				if(time < 0) {
+					recover();
+					return;
+				}
+				showTime();
+			}, 1000);
+			
+			return {
+				close: function(){
+					if(timer) {
+						clearInterval(timer);
+					}
+					recover();
+				}
+			}
+		};
     // if ( typeof noGlobal === strundefined ){
     //     window.H = H;
     // }

@@ -11,19 +11,19 @@
 </head>
 <body>
 	<nav class="ss-bar-tab mui-bar mui-bar-tab">
-	    <a href="/src/views/home/index.html" class="mui-tab-item">
+	    <a href="/src/views/home/index.html" data-id="home-index" class="mui-tab-item">
 	        <span class="mui-icon ss-icon-hongbao"></span>
 	        <span class="mui-tab-label">广告红包</span>
 	    </a>
-	    <a href="/src/views/wifi/main.html" class="mui-tab-item">
+	    <a href="/src/views/wifi/main.html" data-id="wifi-main" class="mui-tab-item">
 	        <span class="mui-icon ss-icon-wifi"></span>
 	        <span class="mui-tab-label">全民WIFI</span>
 	    </a>
-	    <a href="/src/views/earn/main.html" class="mui-tab-item">
+	    <a href="/src/views/earn/main.html" data-id="earn-main" class="mui-tab-item">
 	        <span class="mui-icon ss-icon-earn"></span>
 	        <span class="mui-tab-label">我的收益</span>
 	    </a>
-	    <a href="/src/views/me/main.html" class="mui-tab-item mui-active">
+	    <a href="/src/views/me/main.html" data-id="me-main" class="mui-tab-item mui-active">
 	        <span class="mui-icon ss-icon-me"></span>
 	        <span class="mui-tab-label">我的主页</span>
 	    </a>
@@ -31,44 +31,44 @@
 	<div class="mui-content ss-content">
 	    <div class="section-top">
 	    	<span class="share">分享</span>
-	    	<span class="vipflag">普通会员</span>
+	    	<span class="vipflag" id="level">普通会员</span>
 	    	<div class="avatar-w">
-	    		<img src="../../public/images/avatar.jpg"/>
+	    		<img id="avatar" src="../../public/images/avatar.jpg"/>
 	    	</div>
 	    	<div class="me-info-w">
-	    		<div class="name"><span>balabalabala</span><i class="mui-icon mui-icon-arrowright"></i></div>
-	    		<div class="phone">18608010011 </div>
-	    		<div class="money">￥19200.00</div>
-	    		<div class="jczc">聚财资产<i class="mui-icon mui-icon-arrowright"></i></div>
+	    		<div class="name"><span id="nickName"></span><i class="mui-icon mui-icon-arrowright"></i></div>
+	    		<div class="phone" id="phone">18608010011 </div>
+	    		<div class="money" id="account_balance">￥19200.00</div>
+	    		<div class="jczc" id="jczc">聚财资产<i class="mui-icon mui-icon-arrowright"></i></div>
 	    	</div>
 	    	<span class="btn-order">我的订单</span>
 	    	<div class="guangbo-w">
-	    		<p>系统广播：尊敬的时速聚财app用户现在加入全民Wifi创业计划，...</p>
+	    		<p class="marquee">系统广播：尊敬的时速聚财app用户现在加入全民Wifi创业计划，即享海量优惠。</p>
 	    	</div>
 	    </div>
 	    <div class="section-menus-w cf">
-			    <ul class="mui-table-view">
+			    <!--<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
 	    	            <a class="mui-navigate-right">
 	    	            	商家广告发布与管理
 	    	            </a>
 	    	        </li>
-			    </ul>
+			    </ul>-->
 			    <ul class="mui-table-view">
 					<li class="mui-table-view-cell">
-	    	            <a class="mui-navigate-right">
+	    	            <a class="mui-navigate-right" id="gettudi">
 	    	            	收徒弟
 	    	            </a>
 	    	        </li>
 			    </ul>
 	    	    <ul class="mui-table-view">
 	    	        <li class="mui-table-view-cell">
-	    	            <a class="mui-navigate-right">
+	    	            <a class="mui-navigate-right" id="help">
 	    	            	帮助中心
 	    	            </a>
 	    	        </li>
 	    	        <li class="mui-table-view-cell">
-	    	            <a class="mui-navigate-right">
+	    	            <a class="mui-navigate-right" id="to-setting">
 	    	            	设置
 	    	            </a>
 	    	        </li>

@@ -1,5 +1,15 @@
 @import "../common/variable";
+@import "../common/component";
 @charset "utf-8";
+.remW(@w) {
+    width: @w/@f*@u;
+}
+.remH(@h) {
+    height: @h/@f*@u;
+}
+
+
+
 html{font-size: 62.5%}
 .index-list-titbody,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,body{display:block;padding:0px; margin:0px; border:none;}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;outline: none;}
@@ -143,23 +153,85 @@ a:active,a:visited{color: #333;}
         .font_size(1.2rem);
     };
     span:nth-child(2){
-        .font_size(1.6rem);
+        .font_size(1.5rem);
     };
     span:nth-child(3){
-        .font_size(1.2rem);
+        .font_size(.875rem);
     };
     .txt_black{
-        .font_size(1.6rem);
-        line-height: 3rem;
+        .font_size(1rem);
+        line-height: 1rem;
+        color: rgba(0,0,0,.8); 
+        &:nth-child(2) {
+            padding-top: 6/@f*@u;
+        }
+        &:nth-child(3) {
+            padding-top: 18/@f*@u;
+        }
     }
    
+   &.pocket-block-hongbao {
+       margin: 28/@f*@u 0 26/@f*@u;
+   }
+   &.pocket-block-tudi {
+       margin-top: .5rem;
+       .txt_black:nth-child(2) {
+           line-height: .8;
+           padding-top: .2rem;
+           padding-bottom: 0;
+           font-size: 1rem;
+           color: rgba(0,0,0,0.8);
+        }
+        .txt_black:nth-child(3) {
+            padding-top: 0;
+            font-size: 0.875rem;
+            color: rgba(0,0,0,0.8)
+        }
+    }
+    &.pocket-block-fenxiao {
+        .txt_black:nth-child(2) {
+            padding: 0;
+            font-size: 1rem;
+        }
+        .txt_black:nth-child(3) {
+            padding-top: 0;
+            font-size: 0.875rem;
+            color: rgba(0,0,0,0.8)
+        }
+        .arrow-right {
+            width: .5rem;
+            .remH(13);
+            top: 38%;
+        }
+        img {
+            height: auto;
+        }
+    }
+    
+     &.pocket-block-wifiad {
+       margin-top: .5rem;
+       .txt_black:nth-child(2) {
+           line-height: .8;
+           padding-top: .2rem;
+           padding-bottom: 0;
+           font-size: 1rem;
+           color: rgba(0,0,0,0.8);
+        }
+        .txt_black:nth-child(3) {
+            padding-top: 0;
+            font-size: 0.875rem;
+            color: rgba(0,0,0,0.8)
+        }
+    }
 }
+
 .pocket-btn{
     .font_size(1.8rem);
     clear: both;
-    height: 4.7rem;
-    line-height: 4.7rem;
+    height: 3rem;
+    line-height: 3rem;
     color: #fff;
+    font-size: 1.125rem;
     background: @color_orange;
     a{
         display: block;
@@ -167,10 +239,11 @@ a:active,a:visited{color: #333;}
     }
 }
 .pocket-block2{
+    overflow: auto;
     .pocket-list{
         .fl; 
         width: 100% / 3;
-        margin:1.7rem 0 0;
+        margin:1.25rem 0 0;
        
         div:nth-child(2){ 
             -webkit-text-overflow: ellipsis; 
@@ -179,16 +252,18 @@ a:active,a:visited{color: #333;}
             white-space: nowrap;
             overflow: hidden;
             .font_size(1.3rem);
-            line-height:1.5rem; ;
+            line-height:1;
             .red-txt2;
+            font-size: 1.125rem;
         }
         div:nth-child(3){
             .font_size(1.2rem);
             .red-txt2;
+            font-size: 0.875rem;
         }
         img{
-            width: 4.5rem;
-            height: 5.6rem;
+            .remW(47);
+            .remH(54);
         }
     }
 
@@ -197,6 +272,21 @@ a:active,a:visited{color: #333;}
 .my-pocket2 .pocket-block1{
     margin:.6rem 0; 
     border-bottom:1px solid @border-gray;
+}
+.my-pocket2 .pocket-block1.pocket-block-tudi {
+    margin-top: 0;
+    .pocket-block1-list {
+        padding-top: .8rem;
+        padding-bottom: .4rem;
+        .arrow-right {
+            width: .5rem;
+            .remH(13);
+            top: 38%;
+        }
+        img {
+            height: auto;
+        }
+    }
 }
 .pocket-block1-list{
     position: relative;
@@ -244,42 +334,53 @@ a:active,a:visited{color: #333;}
     }
 }
 .my-profit-txt1{
-    .font_size(1.6rem);
+    .font_size(1.5rem);
 }
 .my-profit-txt2{
-    .font_size(1.4rem);
-    line-height: 2.2rem;
+    .font_size(1rem);
+//  line-height: 1.8;
+    line-height: 1;
+    padding-top: 3px;
 }
 .my-profit-txt3{
-    .font_size(1.2rem);
+    .font_size(0.875rem);
 }
 .my-profit1{
-    margin:1.4rem 1.2rem;
+    margin:12/@f*@u 15/@f*@u 6/@f*@u 15/@f*@u;
     img{
-        margin-right: 2rem;
+//      margin-left: 20/@f*@u;
+        margin-right: 18/@f*@u;
+        width: 47/@f*@u;
+        height: 54/@f*@u;
     }
     .my-profit-div1{
         & > div:first-child{
             .my-profit-txt1;
+            margin-left: -4px;
+//          font-size: 1.5rem;
         }
          & > div:nth-child(2){
             .my-profit-txt2;
+//          font-size: 1rem;
+            
         }
          & > div:nth-child(3){
             .my-profit-txt3;
+//          font-size: 0.875rem;
         } 
     }
     a{
         display: block;
-        width: 11rem;
-        height: 3.9rem; 
+        width: 120/@f*@u;
+        height: 40/@f*@u; 
         text-align: center; 
         background: #FAA519;
         color: #fff;
         .font_size(1.6rem);
-        line-height: 3.9rem;
+        line-height: 2.35;
         border-radius: 6px;
         margin-top: .4rem;
+        font-size: 18/@f*@u;
     }
 }
  
@@ -289,8 +390,8 @@ a:active,a:visited{color: #333;}
     .my-profit2-list{ 
         text-align: center;
         .red-txt; 
-        height: 7.2rem; 
-         width: 50%;    
+        .remH(80);
+         width: 50%;
     .column;
     .flex-align-items-center; 
 
@@ -303,7 +404,14 @@ a:active,a:visited{color: #333;}
         div:nth-child(3){
             .my-profit-txt3;
         }
+        &.ad {
+            .remH(72);
+        }
+        & > div:first-child {
+            padding-top: 5px;
+        }
     }
+    
     @border-color:#CBCBCB;
     .my-profit2-list:nth-child(even){
         border-top:1px solid @border-color; 
@@ -321,3 +429,35 @@ a:active,a:visited{color: #333;}
         height: 100%;
     }
 }
+
+.ss-content {
+    position: relative;
+    .ss-btn-link {
+        position: absolute;
+        bottom: .5rem;
+        left: 50%;
+        margin-left: -40%;
+        background: rgba(255, 255, 255, .2);
+        width: 80%;
+        height: 2.8125rem;
+        padding: 0;
+        border: 1px solid #fff;
+        color: #fff;
+        
+        &:enabled:active {
+            border: 1px solid #838383;
+            background: #838383;
+        }
+    }
+    .ss-btn-getAll {
+        &:enabled:active {
+            background: #ea9100;
+        }
+    }
+    .btn-allGet {
+        &:enabled:active {
+            background: #ea9100;
+        }
+    }
+}
+

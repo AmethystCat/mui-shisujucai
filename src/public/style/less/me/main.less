@@ -127,7 +127,7 @@
             width: 86%;
             height: 46/@f*@u;
             line-height: 1rem;
-            margin: 18/@f*@u auto 0;
+            margin: 18/@f*@u auto 18/@f*@u;
             background-color: #EB4112;
             color: #fff;
             border: none;
@@ -156,7 +156,10 @@
             &-shouhuo-modify {
                 .mui-input-row {
                     label {
+                        display: inline-block;
                         padding: 0;
+                        height: 20px;
+                        line-height: 20px;
                     }
                     input {
                         padding: 0;
@@ -179,4 +182,27 @@
             color: rgba(0,0,0,0.6);
         }
     }
+    
+    .ss-shouhuo-select {
+        height: 20px;
+    }
+}
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 28.5rem }
+    100% { text-indent: -25rem }
 }

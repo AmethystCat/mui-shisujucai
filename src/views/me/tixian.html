@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提现</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/style.css">
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body  class="orange-bg"> 
+	<header class="mui-bar mui-bar-nav ss-bar-nav" style="background: transparent;">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+	    <h1 class="mui-title ss-title">聚财资产</h1>
+	</header>
+     <!--<header class="mui-bar mui-bar-nav ss-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+        <h1 class="mui-title ss-title">聚财资产</h1>
+        <button class="mui-btn mui-btn-link mui-pull-right">分享</button>
+     </header>  -->
+     <div class="mui-content my-earn"> 
+         <a href="javascript:;">
+             <div href="javascript:;" class="my-earn1 tc">
+                 <div class="my-earn1-txt1" id="yue">￥12033.00</div>
+                 <div class="my-earn1-txt2">聚财余额</div>
+                 <div class="my-earn1-img">
+                     <img src="../../public/images/me/right.png" alt=""  class="arrow-r">
+                 </div> 
+             </div>
+         </a>
+         <div class="my-earn2 display-flex">
+              <a href="javascript:;"  class="flex1 tc" style="border-right: 2px solid #fff;"> 
+                 <div class="my-earn2-txt1" id="income">￥0.00</div> 
+                 <div class="my-earn2-txt2">
+                 	收入累计
+                 	<!--<img src="../../public/images/me/right.png" alt=""   class="arrow-r2">-->
+                 </div> 
+              </a>
+              <a href="javascript:;" class="flex1 tc"> 
+                 <div class="my-earn2-txt1" id="withdraw_cash">￥0.00</div>
+                 <div class="my-earn2-txt2">
+                 	提现累计
+                 	<!--<img src="../../public/images/me/right.png" alt=""  class="arrow-r2">-->
+                 </div>  
+              </a>
+         </div> 
+         <div class="my-earn3">
+             <ul>
+                 <li id="go-tixian">
+                     <div class="fl my-earn3-l"><img src="../../public/images/me/btn_bankcardbuy_n.png" alt=""></div>
+                     <div class="fl my-earn3-r">
+                         <div class="my-earn3-txt1">立即提现</div>
+                         <div class="my-earn3-txt2">可提现至支付宝或银行卡</div>
+                     </div>
+                 </li>
+                 <li id="go-chongzhi">
+                     <div class="fl my-earn3-l"><img src="../../public/images/me/alipay.png" alt=""></div>
+                     <div class="fl my-earn3-r">
+                         <div class="my-earn3-txt1">支付宝充值</div>
+                         <div class="my-earn3-txt2">使用支付宝为聚财牛充值</div>
+                     </div>
+                 </li>
+                 <!--<li>
+                     <div class="fl my-earn3-l"><img src="../../public/images/me/wechat.png" alt=""></div>
+                     <div class="fl my-earn3-r">
+                         <div class="my-earn3-txt1">微信充值</div>
+                         <div class="my-earn3-txt2">使用微信用支付宝充值</div>
+                     </div>
+                 </li>-->
+             </ul>
+         </div>
+         <div class="my-earn4 tc">
+             还在等什么 立刻邀请朋友加入聚财资产蹭蹭蹭飙涨
+         </div>
+     </div>
+
+</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../public/js/me/main.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+
+	mui.init();
+	mui.ready(function(){
+		mui.plusReady(function () {
+			var userinfo = JSON.parse(plus.storage.getItem('userinfo'));
+			mui('#yue')[0].innerHTML = '￥' + userinfo.account_balance;
+			
+			H.common.send({
+				url: '/api/user/account',
+				success: function(res){
+					console.log(JSON.stringify(res));
+					if(res.code === 0) {
+						mui('#yue')[0].innerHTML = '￥' + res.account_balance;
+						mui('#income')[0].innerHTML = '￥' + res.income;
+						mui('#withdraw_cash')[0].innerHTML = '￥' + res.withdraw_cash;
+					} else {
+						mui.alert(res.message);
+					}
+				}
+			});
+		});
+		
+		mui('body').on('click', '#go-tixian', function () {
+			mui.openWindow('/src/views/me/tianxian-way.html','me-tixian-way',{});
+		});
+		
+		mui('body').on('click', '#go-chongzhi', function () {
+			mui.openWindow('/src/views/me/chongzhi.html','me-chongzhi',{});
+		});
+		
+	});
+</script>
+</html>

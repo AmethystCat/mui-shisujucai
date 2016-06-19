@@ -1,4 +1,8 @@
 @charset "utf-8";
+html {
+  max-width: 580px;
+  overflow-x: hidden;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -6,7 +10,7 @@ ul {
 .ss-bar-nav {
   box-shadow: none;
   border-bottom: 1px solid #FEC75C;
-  background: url(../../../images/bg_bar.png) repeat-x center;
+  background: url('../../../images/bg_bar.png') repeat-x center;
 }
 .ss-bar-nav .ss-icon-left-nav {
   font-size: 1.5rem;
@@ -14,7 +18,7 @@ ul {
 }
 .ss-bar-nav .ss-title {
   color: #ffedcc;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
 }
 .ss-bar-nav .mui-btn-link {
   color: #ffedcc;
@@ -96,6 +100,23 @@ ul {
   margin-left: -100px;
   background: url(../../../public/images/login/logo2.png) no-repeat center;
   background-size: contain;
+}
+.ss-bar-nav--white {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #adadad;
+  box-shadow: none;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav {
+  color: #FAA519;
+  padding-top: 5px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav img {
+  width: 35px;
+  height: 35px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav + .ss-title {
+  padding-top: 1px;
+  color: #FAA519;
 }
 @font-face {
   font-family: "iconfont";

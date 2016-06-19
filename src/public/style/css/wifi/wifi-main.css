@@ -1,4 +1,8 @@
 @charset "utf-8";
+html {
+  max-width: 580px;
+  overflow-x: hidden;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -6,7 +10,7 @@ ul {
 .ss-bar-nav {
   box-shadow: none;
   border-bottom: 1px solid #FEC75C;
-  background: url(../../../images/bg_bar.png) repeat-x center;
+  background: url('../../../images/bg_bar.png') repeat-x center;
 }
 .ss-bar-nav .ss-icon-left-nav {
   font-size: 1.5rem;
@@ -14,7 +18,7 @@ ul {
 }
 .ss-bar-nav .ss-title {
   color: #ffedcc;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
 }
 .ss-bar-nav .mui-btn-link {
   color: #ffedcc;
@@ -97,6 +101,23 @@ ul {
   background: url(../../../public/images/login/logo2.png) no-repeat center;
   background-size: contain;
 }
+.ss-bar-nav--white {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #adadad;
+  box-shadow: none;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav {
+  color: #FAA519;
+  padding-top: 5px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav img {
+  width: 35px;
+  height: 35px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav + .ss-title {
+  padding-top: 1px;
+  color: #FAA519;
+}
 @font-face {
   font-family: "iconfont";
   src: url('fonts/iconfont.ttf?t=1460618146') format('truetype');
@@ -115,6 +136,14 @@ ul {
 h3,
 h4 {
   color: #5d5757;
+}
+body {
+  background: #fbfbfb;
+}
+.ss-bar-nav--white {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #adadad;
+  box-shadow: none;
 }
 .ss-mui-icon-left-nav {
   color: #FAA519;
@@ -137,10 +166,19 @@ h4 {
   border: none;
   border-top: #ccc;
   border-bottom: #ae7311;
-  background-color: #FAA519;
+  background: #FAA519;
   color: #fff;
   z-index: 1001;
   font-size: 1rem;
+}
+.btn-buy .ss-icon-bankcard {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 24px;
+  height: 20px;
+  background: url('../../../images/wifi/btn_bankcard.png') no-repeat center;
+  background-size: contain;
+  vertical-align: bottom;
 }
 .ss-content {
   position: relative;
@@ -215,4 +253,228 @@ h4 {
 }
 .price-w .wifi-info-w .info-c {
   padding: 10px 10px 0 10px;
+}
+.ss-content__wifi-order .order-info-w {
+  padding-top: 10px;
+  overflow: auto;
+}
+.ss-content__wifi-order .order-info-w .product-thumb {
+  float: left;
+  padding-left: 10px;
+}
+.ss-content__wifi-order .order-info-w .product-thumb img {
+  width: 5rem;
+  height: 5rem;
+}
+.ss-content__wifi-order .order-info-w .order-info {
+  height: 5.3125rem;
+  padding-left: 6.25rem;
+  padding-right: 1rem;
+}
+.ss-content__wifi-order .order-info-w .order-info h4 {
+  font-weight: normal;
+  font-size: 1.125rem;
+}
+.ss-content__wifi-order .order-info-w .order-info div {
+  overflow: hidden;
+}
+.ss-content__wifi-order .order-info-w .order-info span {
+  font-size: 12px;
+  color: #b8b8b8;
+}
+.ss-content__wifi-order .order-info-w .order-info .num-location-w {
+  padding: .2rem 0;
+}
+.ss-content__wifi-order .order-info-w .order-info .num-location-w span:first-child + span {
+  float: right;
+}
+.ss-content__wifi-order .order-info-w .order-info .ordernum-time-w span:first-child {
+  vertical-align: top;
+}
+.ss-content__wifi-order .order-info-w .order-info .ordernum-time-w span:first-child + span {
+  float: right;
+  color: #666;
+}
+.ss-content__wifi-order .order-info-w .money-w {
+  padding: .5rem 0;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #EBEBED;
+  font-size: 12px;
+  text-align: right;
+  background: url('../../../images/wifi/Rectangle.png') repeat-x 0 bottom;
+  background-size: 100% 20%;
+}
+.ss-content__wifi-order .order-info-w .money-w span {
+  color: #b8b8b8;
+}
+.ss-content__wifi-order .order-info-w .money-w span span {
+  color: red;
+  font-size: 16px;
+}
+.ss-content__wifi-order .order-info-w .money-w span span i {
+  font-style: normal;
+  font-size: 18px;
+}
+.ss-content__wifi-order .order-info-w .money-info-w {
+  height: 2.375rem;
+  border-bottom: 1px solid #CCCCCC;
+}
+.ss-content__wifi-order .order-info-w .money-info-w .num {
+  padding-right: .5rem;
+  font-size: .9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ss-content__wifi-order .order-info-w .money-info-w .money {
+  font-size: 1.2rem;
+  color: red;
+}
+.ss-content__wifi-order .order-info-w .price-num-w {
+  padding-top: .5rem;
+}
+.ss-content__wifi-order .order-info-w .price-num-w span:first-child {
+  padding-right: 5px;
+  font-size: 1.3rem;
+  color: red;
+}
+.ss-content__wifi-order .order-info-w .price-num-w .wifi-num {
+  width: 32px;
+  height: 20px;
+  padding: 0 2px;
+  text-align: center;
+}
+.ss-content__wifi-order .category-w {
+  font-size: .75rem;
+}
+.ss-content__wifi-order .category-w span {
+  font-size: .8rem;
+  color: #2d2d2d;
+}
+.ss-content__wifi-order .payment-w ul:first-child:before {
+  height: 0;
+}
+.ss-content__wifi-order .payment-w ul li a span,
+.ss-content__wifi-order .payment-w ul li span {
+  font-size: .94rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.ss-content__wifi-order .payment-w .other-path {
+  margin: 0;
+  padding: 1rem;
+  padding-left: .8rem;
+  background: #EFEFF4;
+  font-size: .94rem;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.7);
+}
+.ss-content__wifi-order .payment-w .mui-radio input[type=radio] {
+  right: 0;
+  top: 0;
+}
+.ss-content__wifi-order .payment-w .mui-radio label {
+  padding: 6px 15px;
+  padding-left: 0;
+  font-size: .94rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.ss-content__wifi-order .payment-w .mui-radio input[type=radio]:checked:before {
+  color: #000;
+}
+.ss-content__wifi-order .payment-w .account-money-w {
+  clear: both;
+  position: relative;
+}
+.ss-content__wifi-order .payment-w .account-money-w .yu-e {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+}
+.ss-content__wifi-order .payment-w .ss-btn-recharge {
+  border: none;
+  background: #FAA519;
+  color: #fff;
+}
+.ss-content__wifi-order .payment-w .ss-btn-recharge:enabled:active {
+  background: grey;
+}
+.ss-content__wifi-order .payment-w .input-recharge {
+  margin-bottom: 7px;
+}
+.ss-content__wifi-order .order-w.address-w {
+  position: relative;
+  padding-left: 3rem;
+  padding-top: .5rem;
+  padding-bottom: 1.25rem;
+  background: url('../../../images/wifi/icon-locate.png') no-repeat 1rem 46%;
+}
+.ss-content__wifi-order .order-w.address-w .inner {
+  padding-right: 1.5625rem;
+  background: url(../../../images/earn/arrow-right.png) no-repeat 97% 50%;
+  background-size: .5rem 1rem;
+  color: #666;
+}
+.ss-content__wifi-order .order-w.address-w .inner .shouhuoren-info-w {
+  padding-top: .5rem;
+  padding-bottom: .2rem;
+  overflow: hidden;
+}
+.ss-content__wifi-order .order-w.address-w .inner .shouhuoren-info-w .phone {
+  float: right;
+  padding-right: .5rem;
+}
+.ss-content__wifi-order .order-w.address-w .inner .shouhuoren-info-w + .address {
+  font-size: .8rem;
+  line-height: 1.3;
+}
+.ss-content__wifi-order .order-w.address-w .hr {
+  position: absolute;
+  width: 100%;
+  height: 11px;
+  left: 0;
+  bottom: 0;
+  background: url(../../../images/wifi/add_seal.png) repeat-x center;
+  background-size: 100% 100%;
+}
+.btn-pay-wifi {
+  width: 80%;
+  height: 2.8125rem;
+  line-height: .8;
+  margin: 0 auto;
+  margin-top: 2.25rem;
+  background: #FAA519;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.05rem;
+}
+.to-pay-w {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  color: #FAA519;
+  font-size: 1rem;
+  overflow: hidden;
+}
+.to-pay-w span:first-child {
+  padding-left: 1.75rem;
+}
+.to-pay-w .btn-pay {
+  position: relative;
+  width: 7rem;
+  float: right;
+  text-align: center;
+}
+.to-pay-w .btn-pay:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 60%;
+  left: 0;
+  top: 20%;
+  background: #ccc;
 }

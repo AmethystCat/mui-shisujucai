@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>支付</title>
+	<link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../public/style/css/wifi/wifi-main.css"/>
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-pull-left ss-mui-icon-left-nav">
+	    	<img src="../../public/images/nav(white)_btn_back_n.png"/>
+	    </a>
+	    <h1 class="mui-title ss-title">支付</h1>
+	</header>
+	<!--<button type="button" class="btn-buy"><i class="ss-icon-bankcard"></i>立即购买</button>-->
+	<div class="mui-content ss-content ss-content__wifi-order">
+		<div class="order-info-w">
+			<!--<div class="product-thumb">
+				<img src="../../public/images/list-img0.png" class="img-hr" />
+			</div>
+			<div class="order-info">
+				<h4>时速无线</h4>
+				<div class="num-location-w">
+					<span>共计12件商品</span>
+					<span>成都</span>
+				</div>
+				<div class="ordernum-time-w">
+					<span>订单编号：1021321212</span>
+					<span>2016-02-13 18:00</span>
+				</div>
+			</div>
+			<div class="money-w">
+				<span>应付金额：<span><i>￥65</i>.00</span></span>
+			</div>-->
+		</div>
+		
+		<div class="payment-w">
+			<ul class="mui-table-view">
+		        <li class="mui-table-view-cell" style="padding: 8px 15px;">
+		            <div class="mui-input-row mui-radio ">
+		                <label>聚财牛 余额支付</label>
+		                <input name="radio" type="radio" class="pay-way" id="pay-yue" checked>
+		            </div>
+		        </li>
+		    </ul>
+		    <ul class="mui-table-view">
+	            <li class="mui-table-view-cell">
+					<div class="account-money-w">
+						<span>聚财牛 账户资金</span>
+		         		<span class="yu-e" id="account_balance">￥1213元</span>
+					</div>
+		        </li>
+	        </ul>
+	        <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-collapse">
+	                <a class="mui-navigate-right" id="recharge">
+	                    <span>充值</span>
+	                </a>
+	                
+	                <div class="mui-collapse-content">
+	                	<input id="input-recharge" class="input-recharge" type="tel" placeholder="请输入充值金额" />
+	                	<button type="button" id="btn-recharge" class="mui-btn ss-btn-recharge">充值</button>
+	                </div>
+	            </li>
+            </ul>
+		    <h4 class="other-path">其他支付方式</h4>
+		    <ul class="mui-table-view">
+	            <li class="mui-table-view-cell" style="padding: 8px 15px;">
+	                <div class="mui-input-row mui-radio ">
+	                    <label>支付宝支付</label>
+	                    <input name="radio" type="radio" class="pay-way" id="pay-ali">	                    
+	                </div>
+	            </li>
+	       </ul>
+		</div>
+	</div>
+	<button type="button" class="btn-pay-wifi mui-btn-block">确认支付</button>
+</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/wifi/wifi-pay.js" type="text/javascript" charset="utf-8"></script>
+</html>

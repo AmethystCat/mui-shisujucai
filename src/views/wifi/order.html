@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>订单确认</title>
+	<link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../public/style/css/wifi/wifi-main.css"/>
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" style="box-shadow: none;border-bottom: 1px solid #DCDCDC;">
+	    <a class="mui-action-back mui-pull-left ss-mui-icon-left-nav">
+	    	<img src="../../public/images/nav(white)_btn_back_n.png"/>
+	    </a>
+	    <h1 class="mui-title ss-title">订单确认</h1>
+	</header>
+	<div class="mui-content ss-content ss-content__wifi-order">
+		<div class="order-w address-w">
+			<div class="inner">
+				<div class="shouhuoren-info-w">
+					<span class="shouhuoren">收货人：mr.god</span>
+					<span class="phone">18080808088</span>
+				</div>
+				<div class="address">
+					收货地址：四川省成都市武侯区二环路南二段188号8栋2单元
+				</div>
+			</div>
+			<div class="hr"></div>
+		</div>
+		<div class="order-info-w">
+			<div class="product-thumb">
+				<img src="../../public/images/list-img0.png" class="img-hr wifi-thumbnail" />
+			</div>
+			<div class="order-info">
+				<h4 class="wifi-name">WIFI宝贝</h4>
+				<div class="category-w">
+					<span>分类：</span>
+					<span class="wifi-category">白色大号</span>
+				</div>
+				<div class="price-num-w">
+					<span class="unit-price">￥3688</span>
+					<span>数量</span>
+					<input type="tel" class="wifi-num" />
+				</div>
+			</div>
+			<div class="money-w money-info-w" style="background: none;">
+				<span class="num">共<label class="quantity"></label>件商品</span>
+				<span>合计：￥</span>
+				<span class="money total-price"></span>
+				<span>(含运费￥<label class="wifi-freight">10.00</label>)</span>
+			</div>
+		</div>
+	</div>
+	<div class="to-pay-w">
+		<span>合计：</span>
+		<span class="accounts total-price">185元</span>
+		<span class="btn-pay">支付</span>
+		<!--<span class="btn-del">删除</span>-->
+	</div>
+</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/wifi/wifi-order.js" type="text/javascript" charset="utf-8"></script>
+</html>

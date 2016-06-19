@@ -10,9 +10,27 @@
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav ss-bar-nav">
-	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+	    <a class="mui-pull-left ss-icon-left-nav"></a>
 	    <h1 class="mui-title ss-title">时速聚财广告红包</h1>
 	</header>
+	<nav class="ss-bar-tab mui-bar mui-bar-tab">
+	    <a href="/src/views/home/index.html" data-id="home-index" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-hongbao"></span>
+	        <span class="mui-tab-label">广告红包</span>
+	    </a>
+	    <a href="/src/views/wifi/main.html" data-id="wifi-main" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-wifi"></span>
+	        <span class="mui-tab-label">全民WIFI</span>
+	    </a>
+	    <a href="/src/views/earn/main.html" data-id="earn-main" class="mui-tab-item mui-active">
+	        <span class="mui-icon ss-icon-earn"></span>
+	        <span class="mui-tab-label">我的收益</span>
+	    </a>
+	    <a href="/src/views/me/main.html" data-id="me-main" class="mui-tab-item">
+	        <span class="mui-icon ss-icon-me"></span>
+	        <span class="mui-tab-label">我的主页</span>
+	    </a>
+	</nav>
 	<div class="mui-content ss-content">
 		<div class="my-profit">
 	        <div class="my-profit1 clearfix">
@@ -20,50 +38,50 @@
 	                <img src="../../public/images/earn/pocket.png" alt="">
 	            </div>
 	            <div class="my-profit-div1 red-txt1 fl"> 
-	                <div>￥23.22</div>
+	                <div>￥<span id="all-notget">0</span></div>
 	                <div>红包合计</div>
-	                <div>累计：￥108.8</div>  
+	                <div>累计：￥<span id="all-geted">0</span></div>  
 	            </div>  
 	            <div class="fr">
-	                <a href="javascript:void(0);">一键领取</a>
+	                <a href="javascript:void(0);" id="btn-getAll" class="ss-btn-getAll">一键领取</a>
 	            </div>
 	        </div>  
 	        <div class="my-profit2">
 	            <a class="my-profit2-list" id="go-hongbao">
-	                <div>￥23.22</div>
+	                <div>￥<span id="me-notget">0</span></div>
 	                <div>我的红包</div>
-	                <div>累计 108.8</div>  
+	                <div>累计 <span id="me-geted">0</span></div>  
 	            </a>
 	            <a class="my-profit2-list" id="go-tudi">
-	                <div>￥23.22</div>
-	                <div>我的红包</div>
-	                <div>累计 108.8</div>  
+	                <div>￥<span id="tudi-notget">0</span></div>
+	                <div>徒弟徒孙分红</div>
+	                <div>累计 <span id="tudi-geted">0</span></div>  
 	            </a>
-	            <a class="my-profit2-list">
+	            <a class="my-profit2-list ad" id="to-ad">
 	                <img src="../../public/images/earn/earnintro1.png" alt="">
 	            </a>
-	            <a class="my-profit2-list">
+	            <a class="my-profit2-list ad" id="to-tudi">
 	                <img src="../../public/images/earn/earnintro2.png" alt="">
 	            </a>
 	            <a class="my-profit2-list" id="go-fenxiao">
-	                <div>￥23.22</div>
+	                <div>￥0.00</div>
 	                <div>wifi宝贝分销收益</div>
-	                <div>累计 108.8</div>  
+	                <div>累计 0.00</div>  
 	            </a>
 	            <a class="my-profit2-list" id="go-ad">
-	                <div>￥23.22</div>
+	                <div>￥0.00</div>
 	                <div>wifi宝贝广告收益</div>
-	                <div>累计 108.8</div>  
+	                <div>累计 0.00</div>  
 	            </a>
-	            <a class="my-profit2-list">
+	            <a class="my-profit2-list ad" id="to-fenxiao">
 	                <img src="../../public/images/earn/earnintro3.png" alt="">
 	            </a>
-	            <a class="my-profit2-list">
+	            <a class="my-profit2-list ad" id="to-fenhong">
 	                <img src="../../public/images/earn/earnintro4.png" alt="">
 	            </a>
 	        </div>
-	        <div class="pocket-block2 tc">
-	            <a href="javascript:void(0);" class="pocket-list">
+	        <div class="pocket-block2 tc" id="hongbao-w">
+	            <!--<a href="javascript:void(0);" class="pocket-list">
 	                <div><img src="../../public/images/earn/pocket.png" alt=""></div>
 	                <div>2.2</div>
 	                <div>首彩葡萄酒</div>
@@ -82,12 +100,114 @@
 	                <div><img src="../../public/images/earn/pocket.png" alt=""></div>
 	                <div>2.23</div>
 	                <div>首彩葡萄酒</div>
-	            </a>
+	            </a>-->
 	        </div>
 	    </div>
 	</div>
     <script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../public/js/earn/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		(function($){
+			$.ready(function () {
+				// 初始化统计数据
+				init();
+				// 一键领取
+				$('.ss-content').on('click', '#btn-getAll', function () {
+					H.common.send({
+						url: '/api/advertisements/red_packages/extract',
+						data: {from: 0},
+						type: 'post',
+						success: function(res){
+							if(res.code === 0){
+								$.toast(res.message || '领取成功');
+								// 刷新页面
+								init();
+							} else {
+								$.toast(res.message);
+							}
+						}
+					});
+				});
+			
+				$(".ss-content").on('click', '.pocket-list', function () {
+					var id = this.getAttribute('data-id');
+					var url = '/api/advertisements/red_packages/' + id + '/extract';
+					H.common.send({
+						url: url,
+						type: 'post',
+						success: function (res) {
+							if(res.code === 0) {
+								$.toast(res.message || '领取成功');
+								init();
+							} else {
+								$.toast(res.message);
+							}
+						}
+					});
+				});
+			});
+			
+			function init () {
+				hongbaoTongji();
+				hongbaoList();
+			}
+			
+			function hongbaoList(){
+				// 红包列表
+				H.common.send({
+					url: '/api/advertisements/red_packages',
+					data: {from: 0, size: 1000, page: 1},
+					success: function (res) {
+						if(res.code === 0){
+							$.toast(res.message);
+							render(res.red_packages);
+						} else {
+							$.toast(res.message);
+						}
+					}
+				});
+			
+				function render(data){
+					if(!$.isArray(data)) return;
+					var str = '';
+					$.each(data, function(index, el) {
+						str += '<a href="javascript:void(0);" data-id="' + el.id + '" class="pocket-list">' + 
+	                			'<div><img src="../../public/images/earn/pocket.png" alt=""></div>' +
+	                			'<div>' + el.amount+ '</div>' +
+	            			'</a>';
+					});
+					$("#hongbao-w")[0].innerHTML = str;
+				}
+			}
+			
+			function hongbaoTongji () {
+				// 红包统计
+				H.common.send({
+					url: '/api/advertisements/profit/statistic',
+					success: function (res) {
+						console.log(JSON.stringify(res));
+						if(res.code === 0){
+							$.toast(res.message);
+							renderTongji(res);
+						} else {
+							$.toast(res.message);
+						}
+					}
+				});
+				
+				function renderTongji(data) {
+					$("#all-notget")[0].innerHTML = data.unextracted_amount || 0;
+					$("#all-geted")[0].innerHTML = data.total_amount || 0;
+					$("#me-notget")[0].innerHTML = data.unextracted_amount_from_self || 0;
+					$("#me-geted")[0].innerHTML = data.amount_from_self || 0;
+					$("#tudi-notget")[0].innerHTML = data.unextracted_amount_from_followers || 0;
+					$("#tudi-geted")[0].innerHTML = data.amount_from_followers || 0;
+				}
+			}
+			
+		}(mui));
+	</script>
 </body>
 </html>

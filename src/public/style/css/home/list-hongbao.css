@@ -1,4 +1,8 @@
 @charset "utf-8";
+html {
+  max-width: 580px;
+  overflow-x: hidden;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -6,7 +10,7 @@ ul {
 .ss-bar-nav {
   box-shadow: none;
   border-bottom: 1px solid #FEC75C;
-  background: url(../../../images/bg_bar.png) repeat-x center;
+  background: url('../../../images/bg_bar.png') repeat-x center;
 }
 .ss-bar-nav .ss-icon-left-nav {
   font-size: 1.5rem;
@@ -14,7 +18,7 @@ ul {
 }
 .ss-bar-nav .ss-title {
   color: #ffedcc;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
 }
 .ss-bar-nav .mui-btn-link {
   color: #ffedcc;
@@ -97,8 +101,77 @@ ul {
   background: url(../../../public/images/login/logo2.png) no-repeat center;
   background-size: contain;
 }
+.ss-bar-nav--white {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #adadad;
+  box-shadow: none;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav {
+  color: #FAA519;
+  padding-top: 5px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav img {
+  width: 35px;
+  height: 35px;
+}
+.ss-bar-nav--white .ss-mui-icon-left-nav + .ss-title {
+  padding-top: 1px;
+  color: #FAA519;
+}
 body {
   background: #fff;
+}
+.ss-content {
+  background: transparent;
+}
+.ss-content .sub-bar-nav {
+  display: table;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  height: 78px;
+  background: #FAA519;
+  box-shadow: none;
+}
+.ss-content .sub-bar-nav .mui-tab-item .mui-icon ~ .mui-tab-label {
+  font-size: 0.75rem;
+  color: #fff6e6;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active {
+  border-bottom: 5px solid #fff;
+  color: #fff;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active .mui-icon {
+  width: 45px;
+  height: 45px;
+}
+.ss-content .sub-bar-nav .mui-tab-item.mui-active .mui-tab-label {
+  padding-top: 0.125rem;
+  font-size: 0.85rem;
+}
+.ss-content .sub-bar-nav .mui-icon {
+  width: 37px;
+  height: 37px;
+  background-size: contain;
+  transition: all 80ms;
+}
+.ss-content .ss-icon-navAll {
+  background: url("../../../images/hb_navlist_all.png") no-repeat center;
+}
+.ss-content .ss-icon-food {
+  background: url("../../../images/hb_navlist_food.png") no-repeat center;
+}
+.ss-content .ss-icon-clothes {
+  background: url("../../../images/hb_navlist_clothes.png") no-repeat center;
+}
+.ss-content .mui-icon-hotel {
+  background: url("../../../images/hb_navlist_hotel.png") no-repeat center;
+}
+.ss-content .ss-icon-navAvilable {
+  background: url("../../../images/hb_navlist_avilable.png") no-repeat center;
+}
+.ss-content .mui-icon-trip {
+  background: url("../../../images/hb_navlist_trip.png") no-repeat center;
 }
 .ss-content--list-hongbao {
   overflow-x: hidden;
@@ -112,12 +185,22 @@ body {
 .ss-content--list-hongbao a img {
   display: block;
   width: 100%;
+  max-height: 180px;
 }
 .ss-content--list-hongbao a .hongbao-info {
+  position: relative;
+  z-index: 3;
   color: #efefef;
 }
 .ss-content--list-hongbao a .hongbao-info span {
   display: block;
+  font-size: .9rem;
+}
+.ss-content--list-hongbao a .hongbao-bottom-bg {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: 2;
 }
 .ss-content--list-hongbao a .text1,
 .ss-content--list-hongbao a .text2 {
@@ -132,13 +215,13 @@ body {
   line-height: 1.3;
 }
 .ss-content--list-hongbao a .text1 .hongbao-name {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 .ss-content--list-hongbao a .text2 {
   right: 0;
   text-align: right;
   padding-right: 0.625rem;
 }
-.ss-content--list-hongbao .list-item-hongbao {
-  background: url(../../../images/hongbaoinfo_bg.png) no-repeat center bottom;
+.ss-list-hongbao-w {
+  margin-top: 78px;
 }

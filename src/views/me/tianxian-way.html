@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>选择提现方式</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/style.css">
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body  class="orange-bg"> 
+     <header class="mui-bar mui-bar-nav ss-bar-nav" style="background: transparent;">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+	    <h1 class="mui-title ss-title">选择提现方式</h1>
+	</header> 
+     <div class="mui-content choose-out-way"> 
+        <div class="my-earn3">
+             <ul>
+                 <li id="to-bank"> 
+                     <a class="fl my-earn3-r">
+                        <img src="../../public/images/me/btn_bankcardbuy_n.png" alt="">
+                         <div class="my-earn3-txt1">银行卡提现</div>
+                         <div class="my-earn3-txt2">通过银行卡账户提现</div>
+                     </a>
+                 </li>
+                 <li id="to-zhifubao">
+                     <a class="fl my-earn3-r">
+                        <img src="../../public/images/me/alipay.png" alt="">
+                         <div class="my-earn3-txt1">支付宝提现</div>
+                         <div class="my-earn3-txt2">通过支付宝账户提现</div>
+                     </a>
+                 </li> 
+             </ul>
+         </div>
+         <div class="choose-out-way2 tc">
+             提现手续费按1%收取&nbsp;单笔手续费最高50元<br/>
+             提交后2个工作日到账<br/>
+             充值金额不能提现
+         </div>
+     </div>
+
+</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../../public/js/me/main.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+	mui.init();
+	mui.ready(function(){
+		mui('body').on('click', '#to-bank', function () {
+			mui.openWindow('/src/views/me/cash-bank.html','me-cash-bank',{});
+		});
+		
+		mui('body').on('click', '#to-zhifubao', function () {
+			mui.openWindow('/src/views/me/cash-zhifubao.html','me-cash-zhifubao',{});
+		});
+	});
+</script>
+</html>

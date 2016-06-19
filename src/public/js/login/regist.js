@@ -1,4 +1,4 @@
-var host = 'http://dev.laiweilai.com:8020',
+var host = H.common.host,
 	resUrl = '/api/user/register',
 	resCode = '/api/user/register/code';
 
@@ -59,23 +59,21 @@ mui.plusReady(function(){
 				console.log(res.code);				
 				console.log(res.msg);	
 				if(res.code === 0) {
-					mui.openWindow({
-						url: '/src/views/login/login.html'
-					});
+					mui.toast(res.message||'成功');
+					setTimeout(function () {
+						mui.openWindow({
+							url: '/src/views/login/login.html'
+						});	
+					}, 1000);
 				}
 				if(res.code !== 0) {
 					errorMes.innerHTML = res.message;
 				}
 			},
 			error: function(xhr, type, errorThrown){
-				errorMes.innerHTML = errorThrown;
-				console.log(xhr);
-				console.log(type);
-				console.log(errorThrown);
+				errorMes.innerHTML = xhr.responseText;
 			}
 		});
-		
-		
 	});
 	
 	mui('.ss-login-form').on('click', '.ss-btn-sendCode', function () {
@@ -86,7 +84,6 @@ mui.plusReady(function(){
 			}
 		mui('.error-mes')[0].innerHTML = '';
 		if (this.className.indexOf('sending') !== -1) return false;
-		console.log(this);
 		util.timeCalc(this, 60);
 		
 		var mobile = mui('#phone')[0].value;
@@ -105,10 +102,7 @@ mui.plusReady(function(){
 				}
 			},
 			error: function(xhr, type, errorThrown){
-				mui('.error-mes')[0].innerHTML = errorThrown;
-				console.log(xhr);
-				console.log(type);
-				console.log(errorThrown);
+				mui('.error-mes')[0].innerHTML = xhr.responseText;
 			}
 		});
 	});

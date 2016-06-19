@@ -7,10 +7,17 @@ mui.init({
 });
 
 mui.plusReady(function(){
-	mui('.ss-login-form').on('click', '.ss-btn-resgist', function () {
+//	mui('.ss-login-form').on('click', '.ss-btn-resgist', function () {
+//		mui.openWindow({
+////			url: '/src/views/home/index.html'
+//			url: '/src/views/wifi/main.html'
+//		});
+//	});
+	H.common.backQuit();
+	mui('body').on('click', '.btn-buy', function () {
 		mui.openWindow({
-//			url: '/src/views/home/index.html'
-			url: '/src/views/wifi/main.html'
+			url: '/src/views/wifi/order.html',
+			id: 'wifi-order'
 		});
 	});
 });

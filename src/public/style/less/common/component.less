@@ -8,6 +8,10 @@
     height: (@h/@f)*@u;
 }
 
+html{
+    max-width: 580px;
+    overflow-x: hidden;
+}
 
 body {
 //  font-family: "arial, helvetica, sans-serif";
@@ -23,14 +27,14 @@ ul {
     @pc: #FFDA99;
     box-shadow: none;
     border-bottom: 1px solid #FEC75C;
-    background: url(../../../images/bg_bar.png) repeat-x center;
+    background: url('../../../images/bg_bar.png') repeat-x center;
     .ss-icon-left-nav {
         font-size: (24/@f)*@u;
         color: #fff;
     }
     .ss-title {
         color: lighten(@pc, 10%);
-        font-size: (22/@f)*@u;
+        font-size: 1.2rem;
     }
     .mui-btn-link {
         color: @pc-l;
@@ -129,3 +133,23 @@ ul {
             background-size: contain;
         }
     }
+    
+.ss-bar-nav--white {
+    background: rgba(255,255,255,.9);
+    border-bottom: 1px solid #adadad;
+    box-shadow: none;
+    .ss-mui-icon-left-nav {
+    //  background: url(../../../images/nav(white)_btn_back_n.png) no-repeat center;
+        color: @nav-arrow-c;
+        padding-top: 5px;
+        img {
+            width: 35px;
+            height: 35px;
+        }
+        
+        & + .ss-title {
+            padding-top: 1px;
+            color: @nav-arrow-c;
+        }
+    }
+}

@@ -3,60 +3,66 @@
 <head> 
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
-    <title>WiFi宝贝分销收益</title>
+    <title>徒弟分红</title>
     <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
     <link rel="stylesheet" href="../../public/style/css/earn/style.css">
+    <style type="text/css">
+    	.btn-allGet:enabled:active {
+    		background: #dc931a;
+    	}
+    </style>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav ss-bar-nav">
 	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
 	    <h1 class="mui-title ss-title">徒弟分红</h1>
+	    <button class="mui-btn mui-btn-link mui-pull-right" type="button" id="btn-how">如何赚取</button>
 	</header>
 	<div class="mui-content ss-content">
 	    <div class="my-pocket2 tc">
-	        <div class="pocket-block1 pocket-block">
+	        <div class="pocket-block1 pocket-block pocket-block-tudi">
 	            <a href="javascript:void(0);" class="pocket-block1-list"> 
 	                <div class="red-txt1">
 	                    <span>￥</span>
-	                    <span>636</span>
-	                    <span>.00</span>
+	                    <span id="tudi1-notget">00.00</span>
+	                    <!--<span>.00</span>-->
 	                </div>
-	                <div class="txt_black txt_black_t">已抢到106个红包</div>
-	                <div class="txt_black">历史积累：￥108.8</div> 
-	                <div class="arrow-right">
+	                <div class="txt_black txt_black_t">徒弟<span id="tudi1-num">0</span>名</div>
+	                <div class="txt_black">累计分红：￥<span id="tudi1-geted">00.0</span></div> 
+	                <!--<div class="arrow-right">
 	                    <img src="../../public/images/earn/arrow-right.png" alt="">
-	                </div>
+	                </div>-->
 	            </a>
 	            <a href="javascript:void(0);" class="pocket-block1-list"> 
 	                <div class="red-txt1">
 	                    <span>￥</span>
-	                    <span>636</span>
-	                    <span>.00</span>
+	                    <span id="tudi2-notget">00.00</span>
+	                    <!--<span>.00</span>-->
 	                </div>
-	                <div class="txt_black">已抢到106个红包</div>
-	                <div class="txt_black">历史积累：￥108.8</div> 
-	                <div class="arrow-right">
+	                <div class="txt_black">徒孙<span id="tudi2-num">0名</span></div>
+	                <div class="txt_black">累计分红：￥<span id="tudi2-geted">0.00</span></div> 
+	                <!--<div class="arrow-right">
 	                    <img src="../../public/images/earn/arrow-right.png" alt="">
-	                </div>
+	                </div>-->
 	            </a>
 	            <a href="javascript:void(0);" class="pocket-block1-list"> 
 	                <div class="red-txt1">
 	                    <span>￥</span>
-	                    <span>636</span>
-	                    <span>.00</span>
+	                    <span id="tudi3-notget">00.00</span>
+	                    <!--<span>.00</span>-->
 	                </div>
-	                <div class="txt_black">已抢到106个红包</div>
-	                <div class="txt_black">历史积累：￥108.8</div> 
-	                <div class="arrow-right">
+	                <div class="txt_black">曾徒孙<span id="tudi3-num">0名</span></div>
+	                <div class="txt_black">累计分红：￥<span id="tudi3-geted">0.00</span></div> 
+	                <!--<div class="arrow-right">
 	                    <img src="../../public/images/earn/arrow-right.png" alt="">
-	                </div>
+	                </div>-->
 	            </a>
 	        </div> 
 	        <div class="pocket-btn">
-	            <a href="javascript:void(0);">一键领取徒弟徒孙分红</a>
+	            <a href="javascript:void(0);" class="btn-allGet" id="btn-getAll">一键领取徒弟徒孙分红</a>
 	        </div>
-	        <div class="pocket-block2 tc">
-	            <a href="javascript:void(0);" class="pocket-list">
+	        <div class="pocket-block2 tc" id="hongbao-w">
+	            <!--<a href="javascript:void(0);" class="pocket-list">
 	                <div><img src="../../public/images/earn/pocket.png" alt=""></div>
 	                <div>2.3</div>
 	                <div>首彩葡萄酒</div>
@@ -75,13 +81,133 @@
 	                <div><img src="../../public/images/earn/pocket.png" alt=""></div>
 	                <div>2.23</div>
 	                <div>首彩葡萄酒</div>
-	            </a>
+	            </a>-->
 	        </div>
 	    </div>
 	</div>
 </body>
 <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	mui.init();
+(function($){
+		$.ready(function () {
+			// 初始化统计数据
+			init();
+			mui.plusReady(function () {
+				$.init({
+					beforeback: function(){
+						console.log('refresh');
+						plus.webview.getWebviewById('earn-main').reload();
+						return true;
+					}
+				});
+			    // 一键领取
+				$('.ss-content').on('click', '#btn-getAll', function () {
+					H.common.send({
+						url: '/api/advertisements/red_packages/extract',
+						data: {from: 1},
+						type: 'post',
+						success: function(res){
+							if(res.code === 0){
+								$.toast(res.message || '领取成功');
+								// 刷新页面
+								init();
+							} else {
+								$.toast(res.message);
+							}
+						}
+					});
+				});
+			
+				$(".ss-content").on('click', '.pocket-list', function () {
+					var id = this.getAttribute('data-id');
+					var url = '/api/advertisements/red_packages/' + id + '/extract';
+					H.common.send({
+						url: url,
+						type: 'post',
+						success: function (res) {
+							if(res.code === 0) {
+								$.toast(res.message || '领取成功');
+								init();
+							} else {
+								$.toast(res.message);
+							}
+						}
+					});
+				});
+			});
+		});
+			
+		$('body').on('click', '#btn-how', function () {
+			mui.openWindow('/src/views/earn/ad-shoutudi.html', 'earn-ad-shoutudi');
+		});
+		
+		function init () {
+			hongbaoTongji();
+			hongbaoList();
+		}
+		
+		function hongbaoList(){
+			// 红包列表
+			H.common.send({
+				url: '/api/advertisements/red_packages',
+				data: {from: 2, size: 1000, page: 1},
+				success: function (res) {
+					if(res.code === 0){
+						$.toast(res.message);
+						render(res.red_packages);
+					} else {
+						$.toast(res.message);
+					}
+				}
+			});
+		
+			function render(data){
+				if(!$.isArray(data)) return;
+				var str = '';
+				$.each(data, function(index, el) {
+					str += '<a href="javascript:void(0);" data-id="' + el.id + '" class="pocket-list">' + 
+                			'<div><img src="../../public/images/earn/pocket.png" alt=""></div>' +
+                			'<div>' + el.amount+ '</div>' +
+            			'</a>';
+				});
+				$("#hongbao-w")[0].innerHTML = str;
+			}
+		}
+		
+		function hongbaoTongji () {
+			// 红包统计
+			H.common.send({
+				url: '/api/advertisements/profit/followers/statistic',
+				success: function (res) {
+					console.log(JSON.stringify(res));
+					if(res.code === 0){
+						$.toast(res.message);
+						renderTongji(res);
+					} else {
+						$.toast(res.message);
+					}
+				}
+			});
+			
+			function renderTongji(data) {
+				$("#tudi1-num")[0].innerHTML = data.followers_1_count || 0;
+				$("#tudi1-notget")[0].innerHTML = data.unextracted_amount_from_followers_1 || 0; 
+				$("#tudi1-geted")[0].innerHTML = data.amount_from_followers_1 || 0;
+				
+				$("#tudi2-num")[0].innerHTML = data.followers_2_count || '';
+				$("#tudi2-notget")[0].innerHTML = data.unextracted_amount_from_followers_2 || 0;
+				$("#tudi2-geted")[0].innerHTML = data.amount_from_followers_2 || 0;
+				
+				$("#tudi3-num")[0].innerHTML = data.followers_3_count || '';
+				$("#tudi3-notget")[0].innerHTML = data.unextracted_amount_from_followers_3 || 0;
+				$("#tudi3-geted")[0].innerHTML = data.amount_from_followers_3 || 0;
+			}
+		}
+			
+	}(mui));
+	
 </script>
 </html>

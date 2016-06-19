@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>设置</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/main.css"/>
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    	.mui-switch.mui-active {
+    		border-color: #FEC75C;
+    		background: #FEC75C;
+    	}
+    	.reg-phone label,
+    	.reg-phone input {
+    		padding: 0;
+    		height: 20px;
+    	}
+    	.reg-phone label {
+    		line-height: 1.3;
+    	}
+    	.tip {
+    		padding-top: .5rem;
+    		text-align: center;
+    		color: #919191;
+    	}
+    </style>
+</head>
+	<body>
+		<header class="mui-bar mui-bar-nav ss-bar-nav">
+		    <a class="mui-action-back mui-btn mui-btn-link mui-pull-left">取消</a>
+		    <h1 class="mui-title ss-title">修改密码</h1>
+		    <button class="mui-btn mui-btn-link mui-pull-right" id="btn-info-sure">确定</button>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-input-row reg-phone">
+						<label>原密码</label>
+						<input type="text" id="old-pass" placeholder="请输入现密码">
+					</div>
+		        </li>
+		    </ul>
+		    <ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-input-row reg-phone">
+						<label>新密码</label>
+						<input type="text" id="new-pass" placeholder="请输入新密码">
+					</div>
+		        </li>
+		    </ul>
+		    <ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-input-row reg-phone">
+						<label>新密码</label>
+						<input type="text" id="pass-confirm" placeholder="请再次输入新密码">
+					</div>
+		        </li>
+		    </ul>
+		</div>
+		<div class="tip" id="tip"></div>
+	</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	mui.init();
+	mui.ready(function () {
+		mui('body').on('click', '#btn-sure', function(){
+			var tip = mui('#tip')[0];
+				tip.innerHTML = '';
+				
+			var old_pass = mui('#old-pass')[0],
+				new_pass = mui('#new-pass')[0],
+				pass_confirm = mui('#pass-confirm')[0];
+				
+			if(new_pass !== pass_confirm) {
+				tip.innerHTML = '两次输入不一致';
+				new_pass.value = '';
+				pass_confirm.value = '';
+				return;
+			}
+			
+			mui.ajax( H.common.host + '/api/user/password_change',{
+				data:{
+					old_password: old_pass.value,
+					new_password: new_pass.value
+				},
+				dataType:'json',//服务器返回json格式数据
+				type:'post',//HTTP请求类型
+				timeout:10000,//超时时间设置为10秒；
+				success:function(res){
+					if(res.code === 0){
+						mui.toast(res.message || '修改成功');
+						mui.openWindow('/src/views/me/main.html','me-main',{});
+					} else {
+						mui('#tip')[0].innerHTML = res.message;
+					}
+				},
+				error:function(xhr,type,errorThrown){
+					mui.alert(xhr.responseText);
+				}
+			});
+		});
+	});
+</script>
+</html>

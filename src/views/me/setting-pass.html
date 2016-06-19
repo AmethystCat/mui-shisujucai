@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>设置</title>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/common/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/style/css/me/main.css"/>
+    <script src="../../public/js/libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+    	.mui-switch.mui-active {
+    		border-color: #FEC75C;
+    		background: #FEC75C;
+    	}
+    	.reg-phone label,
+    	.reg-phone input {
+    		padding: 0;
+    		height: 20px;
+    	}
+    	.reg-phone label {
+    		line-height: 1.3;
+    	}
+    </style>
+</head>
+	<body>
+		<header class="mui-bar mui-bar-nav ss-bar-nav">
+	    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left ss-icon-left-nav"></a>
+	    	<h1 class="mui-title ss-title">设置 </h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-input-row reg-phone">
+						<label>注册号</label>
+						<input type="text" id="contact" value="13222221111" readonly="true">
+					</div>
+		        </li>
+		    </ul>
+			<ul class="mui-table-view">
+        		<li class="mui-table-view-cell">
+	            	<a class="mui-navigate-right" id="to-modify-pass">
+	         			修改密码
+	            	</a>
+	        	</li>
+    		</ul>
+		</div>
+	</body>
+<script src="../../public/js/common/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../public/js/common/rem.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	mui.init();
+	mui.ready(function () {
+		var userinfi
+		mui('body').on('click', '#to-modify-pass', function () {
+			mui.openWindow('/src/views/me/setting-pass-modify.html','me-pass-modify',{})
+		});
+	});
+</script>
+</html>
